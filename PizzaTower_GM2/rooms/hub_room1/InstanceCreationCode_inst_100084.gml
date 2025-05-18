@@ -1,1 +1,0 @@
-levelsign = "snickchallenge";

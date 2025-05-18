@@ -1,1 +1,0 @@
-enterbarrel = 1;
