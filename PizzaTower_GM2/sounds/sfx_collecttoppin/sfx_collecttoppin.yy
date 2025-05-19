@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sfx_collecttoppin",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":3.6459184,
+  "name":"sfx_collecttoppin",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
+  },
+  "preload":true,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sfx_collecttoppin",
+  "type":0,
+  "volume":1.0,
+}
