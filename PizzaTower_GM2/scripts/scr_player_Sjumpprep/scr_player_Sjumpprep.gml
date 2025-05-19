@@ -78,7 +78,7 @@ function scr_player_Sjumpprep() {
     
     if (!key_up && (character == "S" || (sprite_index == spr_player_superjumppreplight || sprite_index == spr_player_superjumpleft || sprite_index == spr_player_superjumpright)) && !scr_solid(x, y - 16) && !scr_solid(x, y - 32))
     {
-        scr_soundeffect(20);
+        scr_soundeffect(sfx_superjumprelease);
         instance_create(x, y, obj_explosioneffect);
         sprite_index = spr_superjump;
         state = 62;
@@ -86,7 +86,7 @@ function scr_player_Sjumpprep() {
     }
     
     if (!audio_is_playing(sfx_superjumphold))
-        scr_soundeffect(19);
+        scr_soundeffect(sfx_superjumphold);
     
     image_speed = 0.35;
 }

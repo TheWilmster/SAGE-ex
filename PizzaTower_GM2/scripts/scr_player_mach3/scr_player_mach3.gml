@@ -42,7 +42,7 @@ function scr_player_mach3() {
     
     if (input_buffer_jump < 8 && grounded && !(move == 1 && xscale == -1) && !(move == -1 && xscale == 1))
     {
-        scr_soundeffect(0);
+        scr_soundeffect(sfx_jump);
         image_index = 0;
         sprite_index = spr_mach3jump;
         vsp = -11;
@@ -93,14 +93,14 @@ function scr_player_mach3() {
     if ((!key_attack && grounded && character == "P") || (character == "S" && (move == 0 || move != xscale) && grounded))
     {
         sprite_index = spr_machslidestart;
-        scr_soundeffect(65);
+        scr_soundeffect(sfx_break);
         state = 70;
         image_index = 0;
     }
     
     if (move == -xscale && grounded && character == "P")
     {
-        scr_soundeffect(62);
+        scr_soundeffect(sfx_machslideboost);
         sprite_index = spr_player_machslideboost3;
         state = 70;
         image_index = 0;
@@ -123,8 +123,8 @@ function scr_player_mach3() {
     if ((scr_solid(x + 1, y) && xscale == 1) && !scr_slope() && !place_meeting(x + sign(hsp), y, obj_slope) && !place_meeting(x + sign(hsp), y, obj_metalblock) && !place_meeting(x + sign(hsp), y, obj_destructibles) && grounded)
     {
         sprite_index = spr_hitwall;
-        scr_soundeffect(15);
-        scr_soundeffect(16);
+        scr_soundeffect(sfx_groundpound);
+        scr_soundeffect(sfx_bumpwall);
         
         with (obj_camera)
         {
@@ -159,8 +159,8 @@ function scr_player_mach3() {
     if ((scr_solid(x - 1, y) && xscale == -1) && !scr_slope() && !place_meeting(x + sign(hsp), y, obj_slope) && !place_meeting(x + sign(hsp), y, obj_metalblock) && !place_meeting(x + sign(hsp), y, obj_destructibles) && grounded)
     {
         sprite_index = spr_hitwall;
-        scr_soundeffect(15);
-        scr_soundeffect(16);
+        scr_soundeffect(sfx_groundpound);
+        scr_soundeffect(sfx_bumpwall);
         
         with (obj_camera)
         {
@@ -187,7 +187,7 @@ function scr_player_mach3() {
     
     if (key_taunt2)
     {
-        scr_soundeffect(60);
+        scr_soundeffect(sfx_taunt);
         taunttimer = 20;
         tauntstoredmovespeed = movespeed;
         tauntstoredsprite = sprite_index;

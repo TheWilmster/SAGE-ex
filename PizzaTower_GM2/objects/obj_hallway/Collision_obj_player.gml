@@ -38,7 +38,7 @@ with (other.id)
         if (state == 70)
             state = 0;
         
-        scr_soundeffect(52);
+        scr_soundeffect(sfx_door);
         instance_create(x, y, obj_fadeout);
     }
 }

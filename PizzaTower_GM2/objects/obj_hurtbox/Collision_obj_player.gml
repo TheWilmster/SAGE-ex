@@ -17,7 +17,7 @@ with (other.id)
     
     if (state != 72 && hurted == 0 && cutscene == 0 && state != 71)
     {
-        scr_soundeffect(10);
+        scr_soundeffect(sfx_pephurt);
         alarm[8] = 60;
         alarm[7] = 120;
         hurted = 1;

@@ -1,4 +1,4 @@
-pal_swap_set(368, obj_player2.paletteselect, 0);
+pal_swap_set(spr_peppalette, obj_player2.paletteselect, 0);
 
 if (obj_player2.state != 54)
 {

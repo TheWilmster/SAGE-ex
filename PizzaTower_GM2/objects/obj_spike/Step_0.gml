@@ -4,7 +4,7 @@ with (obj_player)
     {
         if (state == 26 && hurted == 0)
         {
-            scr_soundeffect(58);
+            scr_soundeffect(sfx_bombpep2);
             image_index = 0;
             hurted = 1;
             vsp = -4;

@@ -1,4 +1,4 @@
-pal_swap_set(368, obj_player.paletteselect, 0);
+pal_swap_set(spr_peppalette, obj_player.paletteselect, 0);
 
 if (obj_player.backupweapon == 1)
     draw_sprite_ext(spr_shotgunbackup, -1, 50, 100, 1, 1, 1, c_white, alpha);

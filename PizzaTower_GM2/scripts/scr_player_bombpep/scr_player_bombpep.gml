@@ -55,7 +55,7 @@ function scr_player_bombpep() {
     
     if (bombpeptimer == 0 && sprite_index == spr_bombpeprunabouttoexplode)
     {
-        scr_soundeffect(58);
+        scr_soundeffect(sfx_bombpep2);
         hurted = 1;
         instance_create(x, y, obj_bombexplosion);
         sprite_index = spr_bombpepend;

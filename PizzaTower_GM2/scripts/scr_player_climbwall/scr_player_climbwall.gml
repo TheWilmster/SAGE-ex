@@ -21,7 +21,7 @@ function scr_player_climbwall() {
     if (scr_solid(x, y - 1) && !place_meeting(x, y - 1, obj_destructibles) && !place_meeting(x + sign(hsp), y, obj_slope) && !place_meeting(x - sign(hsp), y, obj_slope))
     {
         sprite_index = spr_superjumpland;
-        scr_soundeffect(15);
+        scr_soundeffect(sfx_groundpound);
         image_index = 0;
         state = 91;
         machhitAnim = 0;

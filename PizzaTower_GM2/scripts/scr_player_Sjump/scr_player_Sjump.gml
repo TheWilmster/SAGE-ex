@@ -49,7 +49,7 @@ function scr_player_Sjump() {
             }
         }
         
-        scr_soundeffect(15);
+        scr_soundeffect(sfx_groundpound);
         image_index = 0;
         state = 91;
         machhitAnim = 0;

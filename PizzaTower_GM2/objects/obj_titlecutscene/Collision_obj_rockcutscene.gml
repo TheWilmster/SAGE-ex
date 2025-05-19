@@ -1,6 +1,6 @@
 if (other.image_index == 0)
 {
-    scr_soundeffect(10);
+    scr_soundeffect(sfx_pephurt);
     instance_create(x, y, obj_bangeffect);
     sprite_index = spr_player_machfreefall;
     drop = 1;

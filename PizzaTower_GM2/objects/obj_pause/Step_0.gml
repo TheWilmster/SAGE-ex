@@ -20,13 +20,13 @@ if (pause == 1)
     if (key_down2 && selected < 2)
     {
         selected += 1;
-        scr_soundeffect(29);
+        scr_soundeffect(sfx_step);
     }
     
     if (key_up2 && selected > 0)
     {
         selected -= 1;
-        scr_soundeffect(29);
+        scr_soundeffect(sfx_step);
     }
     
     if (key_jump && selected == 1)
@@ -61,7 +61,7 @@ if (pause == 1)
             }
             else
             {
-                scr_soundeffect(8);
+                scr_soundeffect(sfx_enemyprojectile);
             }
         }
         else if (global.snickchallenge == 1)

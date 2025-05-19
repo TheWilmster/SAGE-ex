@@ -12,7 +12,7 @@ function scr_player_machroll() {
     
     if ((scr_solid(x + 1, y) && xscale == 1) && !place_meeting(x + sign(hsp), y, obj_slope) && !place_meeting(x + sign(hsp), y, obj_destructibles))
     {
-        scr_soundeffect(16);
+        scr_soundeffect(sfx_bumpwall);
         hsp = 0;
         image_speed = 0.35;
         flash = 0;
@@ -27,7 +27,7 @@ function scr_player_machroll() {
     
     if ((scr_solid(x - 1, y) && xscale == -1) && !place_meeting(x + sign(hsp), y, obj_slope) && !place_meeting(x + sign(hsp), y, obj_destructibles))
     {
-        scr_soundeffect(16);
+        scr_soundeffect(sfx_bumpwall);
         hsp = 0;
         image_speed = 0.35;
         flash = 0;
@@ -58,7 +58,7 @@ function scr_player_machroll() {
     if (!key_down && !scr_solid(x + 27, y - 32) && !scr_solid(x - 27, y - 32) && !scr_solid(x, y - 32) && !scr_solid(x, y - 16))
     {
         image_index = 0;
-        scr_soundeffect(66);
+        scr_soundeffect(sfx_rollgetup);
         state = 69;
         
         if (character == "P")

@@ -47,7 +47,7 @@ function scr_player_mach2() {
     {
         image_index = 0;
         sprite_index = spr_secondjump1;
-        scr_soundeffect(0);
+        scr_soundeffect(sfx_jump);
         vsp = -11;
     }
     
@@ -152,7 +152,7 @@ function scr_player_mach2() {
     
     if (key_taunt2)
     {
-        scr_soundeffect(60);
+        scr_soundeffect(sfx_taunt);
         taunttimer = 20;
         tauntstoredmovespeed = movespeed;
         tauntstoredsprite = sprite_index;
@@ -167,13 +167,13 @@ function scr_player_mach2() {
     {
         image_index = 0;
         state = 70;
-        scr_soundeffect(65);
+        scr_soundeffect(sfx_break);
         sprite_index = spr_machslidestart;
     }
     
     if (move == -xscale && grounded && character == "P")
     {
-        scr_soundeffect(62);
+        scr_soundeffect(sfx_machslideboost);
         image_index = 0;
         state = 70;
         sprite_index = spr_machslideboost;

@@ -78,7 +78,7 @@ function scr_player_crouch() {
     
     if (key_jump && grounded && !scr_solid(x, y - 16) && !scr_solid(x, y - 32) && character == "P")
     {
-        scr_soundeffect(0);
+        scr_soundeffect(sfx_jump);
         vsp = -8;
         state = 66;
         movespeed = 4;

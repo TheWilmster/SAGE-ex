@@ -5,7 +5,7 @@ with (other.id)
         lastroom_x = other.x;
         lastroom_y = other.y;
         lastroom = room;
-        scr_soundeffect(52);
+        scr_soundeffect(sfx_door);
         obj_camera.chargecamera = 0;
         ds_list_add(global.saveroom, id);
         obj_player1.sprite_index = obj_player1.spr_lookdoor;

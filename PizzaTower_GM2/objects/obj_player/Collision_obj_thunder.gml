@@ -1,7 +1,7 @@
 if (character == "P")
 {
     sprite_index = spr_knightpep_thunder;
-    scr_soundeffect(1);
+    scr_soundeffect(sfx_becomeknight);
     instance_destroy(other.id);
     image_index = 0;
     

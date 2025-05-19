@@ -5,7 +5,7 @@ with (obj_player)
         if (((key_down && !place_meeting(x, y + 1, obj_destructibles) && place_meeting(x, y + 1, other.id) && ((state == 65 || character == "S") || state == 36)) || ((state == 67 || state == 73 || state == 76) && !place_meeting(x, y + 1, obj_destructibles) && place_meeting(x, y + 1, other.id))) && !instance_exists(obj_fadeout) && state != 77 && state != 60)
         {
             other.depth = -10;
-            scr_soundeffect(61);
+            scr_soundeffect(sfx_box);
             obj_player1.box = 1;
             mach2 = 0;
             obj_camera.chargecamera = 0;
@@ -29,7 +29,7 @@ with (obj_player)
     {
         if (((key_up && !place_meeting(x, y - 1, obj_destructibles) && place_meeting(x, y - 1, other.id) && (state == 0 || state == 57 || state == 68 || state == 69 || state == 89 || state == 64)) || ((state == 62 || state == 91) && !place_meeting(x, y - 1, obj_destructibles) && place_meeting(x, y - 1, other.id))) && !instance_exists(obj_fadeout) && state != 77 && state != 60)
         {
-            scr_soundeffect(61);
+            scr_soundeffect(sfx_box);
             other.depth = -10;
             obj_player1.box = 1;
             other.depth = -8;

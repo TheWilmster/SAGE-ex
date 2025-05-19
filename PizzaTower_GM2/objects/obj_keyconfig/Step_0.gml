@@ -3,13 +3,13 @@ if (selecting == -1)
     if (obj_player.key_up2 && key_select > -1)
     {
         key_select -= 1;
-        scr_soundeffect(29);
+        scr_soundeffect(sfx_step);
     }
     
     if (obj_player.key_down2 && key_select < 8)
     {
         key_select += 1;
-        scr_soundeffect(29);
+        scr_soundeffect(sfx_step);
     }
     
     if (-obj_player.key_left2)
@@ -18,7 +18,7 @@ if (selecting == -1)
 
 if (obj_player.key_jump2 && selecting == -1 && key_select == -1)
 {
-    scr_soundeffect(8);
+    scr_soundeffect(sfx_enemyprojectile);
     ini_open("saveData.ini");
     ini_write_string("ControlsKeys", "up", global.key_up);
     ini_write_string("ControlsKeys", "right", global.key_right);

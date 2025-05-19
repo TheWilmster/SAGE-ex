@@ -56,7 +56,7 @@ function scr_player_jump() {
     
     if ((grounded && input_buffer_jump < 8 && !key_down && !key_attack && vsp > 0) && !(sprite_index == spr_player_facestomp || sprite_index == spr_player_freefall))
     {
-        scr_soundeffect(0);
+        scr_soundeffect(sfx_jump);
         sprite_index = spr_jump;
         
         if (shotgunAnim == 1)
@@ -75,7 +75,7 @@ function scr_player_jump() {
     
     if ((grounded && vsp > 0) && !key_attack)
     {
-        scr_soundeffect(29);
+        scr_soundeffect(sfx_step);
         
         if (key_attack)
             landAnim = 0;
@@ -151,7 +151,7 @@ function scr_player_jump() {
         }
         else
         {
-            scr_soundeffect(14);
+            scr_soundeffect(sfx_killingblow);
             image_index = 0;
             state = 90;
             sprite_index = spr_player_shotgunjump1;
@@ -202,7 +202,7 @@ function scr_player_jump() {
             shake_mag_acc = 30 / room_speed;
         }
         
-        scr_soundeffect(15);
+        scr_soundeffect(sfx_groundpound);
         image_index = 0;
         sprite_index = spr_player_bodyslamland;
         state = 76;
@@ -227,7 +227,7 @@ function scr_player_jump() {
     if (key_slap2 && character == "P" && suplexmove == 0 && !(shotgunAnim == 1 && key_up))
     {
         suplexmove = 1;
-        scr_soundeffect(33);
+        scr_soundeffect(sfx_suplexdash);
         state = 21;
         image_index = 0;
         sprite_index = spr_player_suplexgrabjumpstart;
@@ -237,7 +237,7 @@ function scr_player_jump() {
     
     if (key_slap2 && character == "P" && (shotgunAnim == 1 && key_up))
     {
-        scr_soundeffect(14);
+        scr_soundeffect(sfx_killingblow);
         state = 37;
         
         with (instance_create(x, y, obj_pistoleffect))
@@ -268,7 +268,7 @@ function scr_player_jump() {
     
     if (key_taunt2)
     {
-        scr_soundeffect(60);
+        scr_soundeffect(sfx_taunt);
         taunttimer = 20;
         tauntstoredmovespeed = movespeed;
         tauntstoredsprite = sprite_index;

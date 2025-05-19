@@ -15,7 +15,7 @@ if (global.snickchallenge == 1 && global.collect == 0)
         sprite_index = spr_deathstart;
         image_index = 0;
         audio_stop_all();
-        scr_soundeffect(81);
+        scr_soundeffect(sfx_enemyprojectile1);
     }
     
     alarm[2] = -1;

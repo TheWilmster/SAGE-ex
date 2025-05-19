@@ -63,14 +63,14 @@ function scr_player_handstandjump() {
         {
             image_index = 0;
             sprite_index = spr_player_suplexgrabjumpstart;
-            scr_soundeffect(0);
+            scr_soundeffect(sfx_jump);
             instance_create(x, y, obj_highjumpcloud2);
             vsp = -11;
         }
         
         if ((scr_solid(x + 1, y) && xscale == 1) && !place_meeting(x + sign(hsp), y, obj_slope) && !place_meeting(x + xscale, y, obj_destructibles))
         {
-            scr_soundeffect(16);
+            scr_soundeffect(sfx_bumpwall);
             grav = 0.5;
             movespeed = 0;
             state = 71;
@@ -85,7 +85,7 @@ function scr_player_handstandjump() {
         
         if ((scr_solid(x - 1, y) && xscale == -1) && !place_meeting(x + sign(hsp), y, obj_slope) && !place_meeting(x + xscale, y, obj_destructibles))
         {
-            scr_soundeffect(16);
+            scr_soundeffect(sfx_bumpwall);
             grav = 0.5;
             movespeed = 0;
             state = 71;

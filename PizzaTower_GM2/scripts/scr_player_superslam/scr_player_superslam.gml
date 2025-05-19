@@ -12,7 +12,7 @@ function scr_player_superslam() {
     
     if (grounded && !place_meeting(x, y + 1, obj_destructibles) && sprite_index == spr_player_piledriver && vsp > 0)
     {
-        scr_soundeffect(15);
+        scr_soundeffect(sfx_groundpound);
         sprite_index = spr_player_piledriverland;
         jumpAnim = 1;
         image_index = 0;

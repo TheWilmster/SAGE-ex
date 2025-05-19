@@ -45,7 +45,7 @@ function scr_player_knightpep() {
     
     if (floor(image_index) == (image_number - 1) && sprite_index == spr_knightpepjumpstart)
     {
-        scr_soundeffect(0);
+        scr_soundeffect(sfx_jump);
         vsp = -11;
         
         if (key_right)
@@ -82,7 +82,7 @@ function scr_player_knightpep() {
         image_index = 0;
         freefallstart = 0;
         momemtum = 0;
-        scr_soundeffect(15);
+        scr_soundeffect(sfx_groundpound);
         instance_create(x, y, obj_landcloud);
         sprite_index = spr_knightpepland;
     }

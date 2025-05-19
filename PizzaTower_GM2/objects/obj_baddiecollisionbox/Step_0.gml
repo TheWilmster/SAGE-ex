@@ -28,7 +28,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player1) && obj_player1
                     image_index = 0;
                 }
                 
-                scr_soundeffect(34);
+                scr_soundeffect(sfx_punch);
                 instance_destroy(other.baddieID);
                 instance_destroy(other.id);
                 global.hit += 1;
@@ -46,7 +46,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player1) && obj_player1
             
             if (instance_exists(other.baddieID) && y < other.baddieID.y && attacking == 0 && sprite_index != spr_player_mach2jump && (state == 57 || state == 68 || state == 45) && vsp > 0 && other.baddieID.vsp >= 0 && sprite_index != spr_stompprep)
             {
-                scr_soundeffect(12);
+                scr_soundeffect(sfx_stompenemy);
                 
                 if (x != other.baddieID.x)
                     other.baddieID.image_xscale = -sign(other.baddieID.x - x);
@@ -81,7 +81,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player1) && obj_player1
             
             if (instance_exists(other.baddieID) && other.baddieID.state != 95 && other.baddieID.vsp > 0 && state != 56 && state != 42 && state != 70 && state != 73 && state != 69 && state != 21)
             {
-                scr_soundeffect(16);
+                scr_soundeffect(sfx_bumpwall);
                 
                 if (state != 26 && state != 68)
                     movespeed = 0;
@@ -103,7 +103,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player1) && obj_player1
             
             if (instance_exists(other.baddieID) && (state == 42 || state == 73))
             {
-                scr_soundeffect(30);
+                scr_soundeffect(sfx_hitenemy);
                 global.combotime = 60;
                 instance_create(other.baddieID.x, other.baddieID.y, obj_baddiegibs);
                 other.baddieID.flash = 1;
@@ -187,7 +187,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player2) && obj_player2
             
             if (instance_exists(other.baddieID) && y < other.baddieID.y && attacking == 0 && sprite_index != spr_player_mach2jump && (state == 57 || state == 45 || state == 68) && vsp > 0 && other.baddieID.vsp >= 0 && sprite_index != spr_stompprep)
             {
-                scr_soundeffect(12);
+                scr_soundeffect(sfx_stompenemy);
                 
                 if (x != other.baddieID.x)
                     other.baddieID.image_xscale = -sign(other.baddieID.x - x);
@@ -225,7 +225,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player2) && obj_player2
             
             if (instance_exists(other.baddieID) && other.baddieID.vsp > 0 && state != 56 && state != 56 && state != 42 && state != 70 && state != 73 && state != 69 && state != 21)
             {
-                scr_soundeffect(16);
+                scr_soundeffect(sfx_bumpwall);
                 
                 if (state != 68)
                     movespeed = 0;
@@ -273,8 +273,8 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player2) && obj_player2
             
             if (instance_exists(other.baddieID) && (state == 21 || state == 69) && !(other.baddieID.state == 104 && other.baddieID.stunned > 100))
             {
-                scr_soundeffect(30);
-                scr_soundeffect(13);
+                scr_soundeffect(sfx_hitenemy);
+                scr_soundeffect(sfx_machpunch);
                 
                 if (other.baddieID.object_index == obj_pizzaball)
                     global.golfhit += 1;

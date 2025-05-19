@@ -47,8 +47,8 @@ function scr_player_knightpepslopes() {
             obj_player.hsp = 5;
         
         vsp = -3;
-        scr_soundeffect(16);
-        scr_soundeffect(17);
+        scr_soundeffect(sfx_bumpwall);
+        scr_soundeffect(sfx_loseknight);
         image_index = 0;
         obj_player.image_index = 0;
         obj_player.flash = 1;

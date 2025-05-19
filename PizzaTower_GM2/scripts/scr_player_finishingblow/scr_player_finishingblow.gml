@@ -9,14 +9,14 @@ function scr_player_finishingblow() {
     
     if (floor(image_index) == 6 && !instance_exists(obj_swordhitbox))
     {
-        scr_soundeffect(34);
-        scr_soundeffect(14);
+        scr_soundeffect(sfx_punch);
+        scr_soundeffect(sfx_killingblow);
         instance_create(x, y, obj_swordhitbox);
     }
     
     if (floor(image_index) == 0 && !instance_exists(obj_swordhitbox) && sprite_index == spr_player_swingdingend)
     {
-        scr_soundeffect(14);
+        scr_soundeffect(sfx_killingblow);
         instance_create(x, y, obj_swordhitbox);
     }
     

@@ -1,6 +1,6 @@
 if (ds_list_find_index(global.saveroom, id) == -1 && global.snickchallenge == 0)
 {
-    scr_soundeffect(31);
+    scr_soundeffect(sfx_escaperumble);
     obj_camera.alarm[1] = 60;
     instance_create(x, y, obj_bangeffect);
     instance_create(x, y, obj_slapstar);
@@ -21,7 +21,7 @@ if (ds_list_find_index(global.saveroom, id) == -1 && global.snickchallenge == 0)
     with (instance_create(x, y, obj_sausageman_dead))
         sprite_index = spr_hungrypillar_dead;
     
-    scr_soundeffect(11);
+    scr_soundeffect(sfx_killenemy);
     instance_create(x, y + 600, obj_itspizzatime);
     global.panic = 1;
     

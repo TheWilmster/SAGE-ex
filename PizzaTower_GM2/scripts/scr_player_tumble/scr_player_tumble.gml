@@ -14,7 +14,7 @@ function scr_player_tumble() {
     
     if (place_meeting(x + xscale, y, obj_solid) && !place_meeting(x + hsp, y, obj_destructibles))
     {
-        scr_soundeffect(38);
+        scr_soundeffect(sfx_tumble4);
         hsp = 0;
         movespeed = 0;
         sprite_index = spr_tumbleend;

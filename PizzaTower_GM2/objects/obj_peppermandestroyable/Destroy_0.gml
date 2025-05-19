@@ -4,7 +4,7 @@ if (ds_list_find_index(global.saveroom, id) == -1)
     instance_create(x + 16, y, obj_debris);
     instance_create(x + 16, y, obj_debris);
     instance_create(x + 16, y, obj_debris);
-    scr_soundeffect(3, 4);
+    scr_soundeffect(sfx_breakblock1, sfx_breakblock2);
     ds_list_add(global.saveroom, id);
     var lay_id = layer_get_id("Tiles_1");
     var map_id = layer_tilemap_get_id(lay_id);

@@ -17,7 +17,7 @@ with (obj_player)
         if (other.sprite_index == other.spridle)
         {
             state = 22;
-            scr_soundeffect(9);
+            scr_soundeffect(sfx_secretfound);
         }
         
         other.sprite_index = other.sprgot;

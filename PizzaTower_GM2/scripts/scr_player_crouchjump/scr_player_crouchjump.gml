@@ -31,7 +31,7 @@ function scr_player_crouchjump() {
         crouchAnim = 1;
         image_index = 0;
         jumpstop = 0;
-        scr_soundeffect(29);
+        scr_soundeffect(sfx_step);
     }
     
     if (jumpAnim == 1)
@@ -63,7 +63,7 @@ function scr_player_crouchjump() {
         image_index = 0;
         jumpstop = 0;
         mask_index = spr_player_mask;
-        scr_soundeffect(29);
+        scr_soundeffect(sfx_step);
     }
     
     if (move != 0)

@@ -5,7 +5,7 @@ if (obj_player.shotgunAnim == 0 && obj_player.backupweapon == 0 && obj_player.st
     obj_player.image_index = 0;
     obj_player.sprite_index = spr_shotgun_pullout;
     global.gotshotgun = 1;
-    scr_soundeffect(64);
+    scr_soundeffect(sfx_collectgiantpizza4);
     instance_destroy();
 }
 else if (obj_player.shotgunAnim == 1 && obj_player.backupweapon == 0 && obj_player.state == 21)

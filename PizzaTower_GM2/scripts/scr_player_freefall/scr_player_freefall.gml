@@ -53,7 +53,7 @@ function scr_player_freefall() {
     
     if (grounded && !(input_buffer_jump < 8) && !place_meeting(x, y + 1, obj_destructibles))
     {
-        scr_soundeffect(15);
+        scr_soundeffect(sfx_groundpound);
         freefallsmash = 0;
         
         if (shotgunAnim == 0)

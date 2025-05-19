@@ -37,7 +37,7 @@ function scr_player_tacklecharge() {
     {
         image_index = 0;
         sprite_index = spr_player_secondjump1;
-        scr_soundeffect(0);
+        scr_soundeffect(sfx_jump);
         vsp = -11;
     }
     
@@ -143,7 +143,7 @@ function scr_player_tacklecharge() {
     {
         image_index = 0;
         state = 70;
-        scr_soundeffect(27);
+        scr_soundeffect(sfx_machslide);
         sprite_index = spr_machslidestart;
     }
     

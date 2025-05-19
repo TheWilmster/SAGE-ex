@@ -9,6 +9,6 @@ if (ds_list_find_index(global.saveroom, id) == -1 && global.snickchallenge == 0)
         alarm[0] = 150;
     }
     
-    scr_soundeffect(9);
+    scr_soundeffect(sfx_secretfound);
     ds_list_add(global.saveroom, id);
 }

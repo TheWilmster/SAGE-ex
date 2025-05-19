@@ -41,7 +41,7 @@ function scr_player_fireass() {
         
         if (floor(image_index) == (image_number - 1) || place_meeting(x + xscale, y, obj_solid))
         {
-            scr_soundeffect(51);
+            scr_soundeffect(sfx_fireassend);
             sprite_index = spr_fireassend;
             hsp = 0;
             image_index = 0;

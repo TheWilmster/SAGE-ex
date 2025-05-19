@@ -3,13 +3,13 @@ if (!instance_exists(obj_keyconfig))
     if (obj_player.key_up2 && optionselected > 0)
     {
         optionselected -= 1;
-        scr_soundeffect(29);
+        scr_soundeffect(sfx_step);
     }
     
     if (obj_player.key_down2 && optionselected < 2)
     {
         optionselected += 1;
-        scr_soundeffect(29);
+        scr_soundeffect(sfx_step);
     }
 }
 
@@ -85,7 +85,7 @@ if (optionselected == 2)
 
 if ((obj_player.key_slap2 || obj_player.key_start) && !instance_exists(obj_keyconfig))
 {
-    scr_soundeffect(8);
+    scr_soundeffect(sfx_enemyprojectile);
     obj_mainmenuselect.selected = 0;
     instance_destroy();
 }

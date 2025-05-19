@@ -27,7 +27,7 @@ if (ds_list_find_index(global.saveroom, id) == -1)
         audio_stop_sound(sfx_breakblock2);
     }
     
-    scr_soundeffect(3, 4);
+    scr_soundeffect(sfx_breakblock1, sfx_breakblock2);
     ds_list_add(global.saveroom, id);
     var lay_id = layer_get_id("Tiles_1");
     var map_id = layer_tilemap_get_id(lay_id);

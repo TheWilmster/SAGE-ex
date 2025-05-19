@@ -6,7 +6,7 @@ with (obj_player1)
         global.key_inv = 1;
         key_particles = 1;
         alarm[7] = 30;
-        scr_soundeffect(7);
+        scr_soundeffect(sfx_collecttoppin);
     }
 }
 

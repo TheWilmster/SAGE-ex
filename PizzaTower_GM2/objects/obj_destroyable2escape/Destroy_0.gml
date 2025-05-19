@@ -17,7 +17,7 @@ if (ds_list_find_index(global.saveroom, id) == -1)
             audio_stop_sound(sfx_breakblock2);
         }
         
-        scr_soundeffect(3, 4);
+        scr_soundeffect(sfx_breakblock1, sfx_breakblock2);
         ds_list_add(global.saveroom, id);
     }
 }

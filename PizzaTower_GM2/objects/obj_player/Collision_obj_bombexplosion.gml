@@ -2,7 +2,7 @@ if (hurted == 0 && cutscene == 0 && (state != 26 && sprite_index != spr_bombpep_
 {
     if (state == 23 || state == 24)
     {
-        scr_soundeffect(17);
+        scr_soundeffect(sfx_loseknight);
         
         with (instance_create(x, y, obj_knightdebris))
             image_index = 0;

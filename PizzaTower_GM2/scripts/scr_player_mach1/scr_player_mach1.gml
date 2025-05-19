@@ -111,7 +111,7 @@ function scr_player_mach1() {
     
     if (key_jump && grounded)
     {
-        scr_soundeffect(0);
+        scr_soundeffect(sfx_jump);
         sprite_index = spr_airdash1;
         dir = xscale;
         momemtum = 1;
@@ -167,7 +167,7 @@ function scr_player_mach1() {
     
     if (key_taunt2)
     {
-        scr_soundeffect(60);
+        scr_soundeffect(sfx_taunt);
         taunttimer = 20;
         tauntstoredmovespeed = movespeed;
         tauntstoredsprite = sprite_index;

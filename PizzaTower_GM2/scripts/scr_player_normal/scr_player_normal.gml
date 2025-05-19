@@ -226,7 +226,7 @@ function scr_player_normal() {
     
     if (key_jump && grounded && !key_down)
     {
-        scr_soundeffect(0);
+        scr_soundeffect(sfx_jump);
         sprite_index = spr_jump;
         
         if (shotgunAnim == 1)
@@ -243,7 +243,7 @@ function scr_player_normal() {
     
     if (grounded && input_buffer_jump < 8 && !key_down && !key_attack && vsp > 0)
     {
-        scr_soundeffect(0);
+        scr_soundeffect(sfx_jump);
         sprite_index = spr_jump;
         
         if (shotgunAnim == 1)
@@ -306,7 +306,7 @@ function scr_player_normal() {
     if (key_slap2 && character == "P" && !(shotgunAnim == 1 && key_up))
     {
         suplexmove = 1;
-        scr_soundeffect(33);
+        scr_soundeffect(sfx_suplexdash);
         state = 21;
         image_index = 0;
         
@@ -320,7 +320,7 @@ function scr_player_normal() {
     
     if (key_slap2 && character == "P" && (shotgunAnim == 1 && key_up))
     {
-        scr_soundeffect(14);
+        scr_soundeffect(sfx_killingblow);
         state = 37;
         
         with (instance_create(x, y, obj_pistoleffect))
@@ -381,7 +381,7 @@ function scr_player_normal() {
     
     if (key_taunt2)
     {
-        scr_soundeffect(60);
+        scr_soundeffect(sfx_taunt);
         taunttimer = 20;
         tauntstoredmovespeed = movespeed;
         tauntstoredsprite = sprite_index;

@@ -9,17 +9,17 @@ if (selected == 0)
     if (obj_player.key_right2 && optionselected < 2)
     {
         optionselected += 1;
-        scr_soundeffect(29);
+        scr_soundeffect(sfx_step);
     }
     else if (-obj_player.key_left2 && optionselected > 0)
     {
         optionselected -= 1;
-        scr_soundeffect(29);
+        scr_soundeffect(sfx_step);
     }
     
     if (obj_player.key_jump && optionselected == 0)
     {
-        scr_soundeffect(7);
+        scr_soundeffect(sfx_collecttoppin);
         obj_file1.sprite_index = spr_file1confirm;
         selected = 1;
         alarm[0] = 60;
@@ -27,14 +27,14 @@ if (selected == 0)
     
     if (obj_player.key_jump && optionselected == 1)
     {
-        scr_soundeffect(7);
+        scr_soundeffect(sfx_collecttoppin);
         selected = 1;
         alarm[1] = 5;
     }
     
     if (obj_player.key_jump && optionselected == 2)
     {
-        scr_soundeffect(7);
+        scr_soundeffect(sfx_collecttoppin);
         selected = 1;
         alarm[2] = 5;
     }

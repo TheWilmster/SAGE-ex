@@ -12,7 +12,7 @@ with (obj_player)
             shake_mag_acc = 3 / room_speed;
         }
         
-        scr_soundeffect(30);
+        scr_soundeffect(sfx_hitenemy);
         other.sprite_index = spr_hungrypillar_angry;
         other.hp -= 1;
         movespeed = 3;
