@@ -19,6 +19,6 @@ else if (!audio_is_playing(mu_snickchallengeend) && global.snickchallenge == tru
 }
 
 if (room != hub_room1)
-    fadeoff = audio_sound_get_track_position(global.music);
+    fadeoff = clamp(audio_sound_get_track_position(global.music), 0, audio_sound_get_loop_end(global.music));
 else
     fadeoff = 0;
