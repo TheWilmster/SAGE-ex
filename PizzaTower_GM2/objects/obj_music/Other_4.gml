@@ -1,4 +1,4 @@
-if (global.panic == 0 && global.snickchallenge == 0)
+if (global.panic == false && global.snickchallenge == false)
 {
     if (instance_exists(obj_pepperman))
     {
