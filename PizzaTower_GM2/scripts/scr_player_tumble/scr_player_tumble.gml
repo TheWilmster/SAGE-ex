@@ -25,14 +25,14 @@ function scr_player_tumble() {
     if (key_jump)
         input_buffer_jump = 0;
     
-    if (!key_jump2 && jumpstop == 0 && vsp < 0.5 && stompAnim == 0)
+    if (!key_jump2 && jumpstop == false && vsp < 0.5 && stompAnim == false)
     {
         vsp /= 2;
-        jumpstop = 1;
+        jumpstop = true;
     }
     
     if (grounded && vsp > 0)
-        jumpstop = 0;
+        jumpstop = false;
     
     if (input_buffer_jump < 8 && grounded && hsp != 0)
         vsp = -9;

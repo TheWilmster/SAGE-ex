@@ -17,15 +17,15 @@ function scr_player_shotgunjump() {
         movespeed = 0;
     }
     
-    landAnim = 1;
+    landAnim = true;
     
     if (ladderbuffer > 0)
         ladderbuffer--;
     
-    if (scr_solid(x, y - 1) && jumpstop == 0 && jumpAnim == 1)
+    if (scr_solid(x, y - 1) && jumpstop == false && jumpAnim == true)
     {
         vsp = grav;
-        jumpstop = 1;
+        jumpstop = true;
     }
     
     if (sprite_index == spr_player_shotgunjump2 && floor(image_index) == (image_number - 1))
@@ -33,14 +33,14 @@ function scr_player_shotgunjump() {
     
     if (grounded && input_buffer_jump < 5 && !key_down && vsp > 0)
     {
-        stompAnim = 0;
+        stompAnim = false;
         vsp = -9;
         state = 57;
-        jumpAnim = 1;
-        jumpstop = 0;
+        jumpAnim = true;
+        jumpstop = false;
         image_index = 0;
         instance_create(x, y, obj_landcloud);
-        freefallstart = 0;
+        freefallstart = false;
     }
     
     if (key_jump)

@@ -24,9 +24,9 @@ function scr_collide_destructibles() {
     {
         with (instance_place(x, y + 1, obj_destructibleplatform))
         {
-            falling = 1;
+            falling = true;
             
-            if (falling == 1)
+            if (falling == trie)
                 image_speed = 0.35;
         }
     }
@@ -58,7 +58,7 @@ function scr_collide_destructibles() {
                 {
                     if (place_meeting(x, y + vsp + 2, obj_bigdestructibles))
                     {
-                        if (shotgunAnim == 0)
+                        if (shotgunAnim == false)
                             sprite_index = spr_bodyslamland;
                         else
                             sprite_index = spr_player_shotgunjump2;
@@ -92,7 +92,7 @@ function scr_collide_destructibles() {
                 {
                     if (place_meeting(x + hsp, y, obj_bigdestructibles))
                     {
-                        if (shotgunAnim == 0)
+                        if (shotgunAnim == false)
                         {
                             sprite_index = choose(spr_player_suplexmash1, spr_player_suplexmash2, spr_player_suplexmash3, spr_player_suplexmash4, spr_player_suplexmash5, spr_player_suplexmash6, spr_player_suplexmash7);
                             image_index = 0;
@@ -128,10 +128,10 @@ function scr_collide_destructibles() {
     
     with (obj_baddie)
     {
-        if (place_meeting(x + hsp, y, obj_destructibles) && thrown == 1)
+        if (place_meeting(x + hsp, y, obj_destructibles) && thrown == true)
             instance_destroy(instance_place(x + hsp, y, obj_destructibles));
         
-        if (place_meeting(x, y + vsp, obj_destructibles) && thrown == 1)
+        if (place_meeting(x, y + vsp, obj_destructibles) && thrown == true)
             instance_destroy(instance_place(x + vsp, y, obj_destructibles));
     }
 }

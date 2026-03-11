@@ -1,8 +1,4 @@
-function __view_set_internal() {
-    var __prop = argument[0];
-    var __index = argument[1];
-    var __val = argument[2];
-    
+function __view_set_internal(__prop, __index, __val) {
     switch (__prop)
     {
         case 0:

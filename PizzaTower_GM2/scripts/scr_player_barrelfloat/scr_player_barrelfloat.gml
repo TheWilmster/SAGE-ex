@@ -6,10 +6,10 @@ function scr_player_barrelfloat() {
     
     if (key_jump)
     {
-        jumpstop = 1;
-        jumpAnim = 1;
+        jumpstop = true;
+        jumpAnim = true;
         state = 57;
-        landAnim = 0;
+        landAnim = false;
         vsp = -7;
         
         with (instance_create(x, y, obj_barrelfloat))

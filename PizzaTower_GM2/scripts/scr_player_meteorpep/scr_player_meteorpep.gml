@@ -1,6 +1,6 @@
 function scr_player_meteorpep() {
     mach2 = 0;
-    landAnim = 1;
+    landAnim = true;
     vsp = 0;
     
     if (sprite_index == spr_meteorpep_impact && floor(image_index) == (image_number - 1))

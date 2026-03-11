@@ -62,16 +62,16 @@ function scr_player_Sjumpprep() {
         }
     }
     
-    start_running = 1;
+    start_running = true;
     alarm[4] = 14;
-    jumpAnim = 1;
-    dashAnim = 1;
-    landAnim = 0;
-    machslideAnim = 1;
-    moveAnim = 1;
-    stopAnim = 1;
-    crouchslideAnim = 1;
-    crouchAnim = 1;
+    jumpAnim = true;
+    dashAnim = true;
+    landAnim = false;
+    machslideAnim = true;
+    moveAnim = true;
+    stopAnim = true;
+    crouchslideAnim = true;
+    crouchAnim = true;
     
     if (floor(image_index) == (image_number - 1) && sprite_index == spr_player_superjumpprep)
         sprite_index = spr_player_superjumppreplight;

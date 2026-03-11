@@ -20,7 +20,7 @@ function scr_player_barrelmach2() {
     
     if (scr_solid(x + 1, y) && image_xscale == 1)
     {
-        barrel = 0;
+        barrel = false;
         state = 71;
         hsp = -2;
         vsp = -2;
@@ -41,7 +41,7 @@ function scr_player_barrelmach2() {
     
     if (scr_solid(x - 1, y) && image_xscale == -1)
     {
-        barrel = 0;
+        barrel = false;
         state = 71;
         hsp = 2;
         vsp = -2;

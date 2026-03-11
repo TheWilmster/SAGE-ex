@@ -1,14 +1,14 @@
 function scr_player_pizzathrow() {
-    movespeed = 0;
+    movespeed = false;
     mach2 = 0;
     hsp = 0;
     xscale = -1;
-    jumpstop = 0;
+    jumpstop = false;
     
     if (global.shroomfollow == 0 && global.cheesefollow == 0 && global.tomatofollow == 0 && global.sausagefollow == 0 && global.pineapplefollow == 0)
     {
         state = 0;
-        landAnim = 0;
+        landAnim = false
         mach2 = 0;
         image_index = 0;
     }
@@ -21,7 +21,7 @@ function scr_player_pizzathrow() {
     
     if (instance_exists(obj_toppinsacrifice))
     {
-        if (obj_toppinsacrifice.throwed == 0 && key_slap2)
+        if (obj_toppinsacrifice.throwed == false && key_slap2)
         {
             obj_toppinsacrifice.hsp = -4;
             obj_toppinsacrifice.throwed = 1;

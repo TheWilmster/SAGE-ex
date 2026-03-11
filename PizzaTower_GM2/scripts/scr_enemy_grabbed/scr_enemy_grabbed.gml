@@ -40,7 +40,7 @@ function scr_enemy_grabbed() {
             other.hp -= 1;
             instance_create(other.x, other.y, obj_slapstar);
             instance_create(other.x, other.y, obj_baddiegibs);
-            other.flash = 1;
+            other.flash = true;
             
             with (obj_camera)
             {
@@ -71,7 +71,7 @@ function scr_enemy_grabbed() {
         hp -= 1;
         instance_create(x + (obj_player1.xscale * 30), y, obj_bumpeffect);
         alarm[1] = 5;
-        thrown = 1;
+        thrown = true;
         x = obj_player1.x;
         vsp = 0;
         y = obj_player1.y;
@@ -81,7 +81,7 @@ function scr_enemy_grabbed() {
         global.combotime = 60;
         instance_create(x, y, obj_slapstar);
         instance_create(x, y, obj_baddiegibs);
-        flash = 1;
+        flash = true;
         
         with (obj_camera)
         {
@@ -107,7 +107,7 @@ function scr_enemy_grabbed() {
         hp -= 1;
         instance_create(x + (-obj_player1.xscale * 50), y, obj_bumpeffect);
         alarm[1] = 5;
-        thrown = 1;
+        thrown = true;
         x = obj_player1.x;
         y = obj_player1.y;
         state = 104;
@@ -117,7 +117,7 @@ function scr_enemy_grabbed() {
         global.combotime = 60;
         instance_create(x, y, obj_slapstar);
         instance_create(x, y, obj_baddiegibs);
-        flash = 1;
+        flash = true;
         
         with (obj_camera)
         {
@@ -137,7 +137,7 @@ function scr_enemy_grabbed() {
         hp -= 1;
         instance_create(x, y + 20, obj_bumpeffect);
         alarm[1] = 5;
-        thrown = 1;
+        thrown = true;
         x = obj_player1.x;
         y = obj_player1.y;
         state = 104;
@@ -160,7 +160,7 @@ function scr_enemy_grabbed() {
         global.combotime = 60;
         instance_create(x, y, obj_slapstar);
         instance_create(x, y, obj_baddiegibs);
-        flash = 1;
+        flash = true;
         
         with (obj_camera)
         {
@@ -193,7 +193,7 @@ function scr_enemy_grabbed() {
         
         global.combotime = 60;
         alarm[1] = 5;
-        thrown = 1;
+        thrown = true;
         state = 104;
         
         with (obj_player)
@@ -221,7 +221,7 @@ function scr_enemy_grabbed() {
             global.golfhit += 1;
         
         alarm[1] = 5;
-        thrown = 1;
+        thrown = true;
         x = obj_player1.x;
         y = obj_player1.y;
         state = 104;
@@ -249,7 +249,7 @@ function scr_enemy_grabbed() {
         global.combotime = 60;
         instance_create(x, y, obj_slapstar);
         instance_create(x, y, obj_baddiegibs);
-        flash = 1;
+        flash = true;
         
         with (obj_camera)
         {
@@ -348,7 +348,7 @@ function scr_enemy_grabbed() {
         global.hit += 1;
         hp -= 5;
         alarm[1] = 5;
-        thrown = 1;
+        thrown = true;
         x = obj_player1.x;
         y = obj_player1.y;
         state = 104;

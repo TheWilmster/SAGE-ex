@@ -5,7 +5,7 @@
   "isCompatibility": false,
   "isDnD": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "Palette Swapping",
+    "path": "folders/Scripts/Palette Swapping.yy",
   },
 }

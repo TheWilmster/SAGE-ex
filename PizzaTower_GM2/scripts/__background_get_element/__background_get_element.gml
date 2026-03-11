@@ -1,5 +1,4 @@
-function __background_get_element() {
-    var __bind = argument[0];
+function __background_get_element(__bind) {
     var __result;
     __result[0] = -1;
     __result[1] = -1;

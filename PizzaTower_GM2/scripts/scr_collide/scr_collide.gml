@@ -1,5 +1,5 @@
 function scr_collide() {
-    grounded = 0;
+    grounded = false;
     
     repeat (abs(vsp))
     {

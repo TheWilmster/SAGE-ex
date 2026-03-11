@@ -1,7 +1,7 @@
 function scr_player_mach1() {
     dir = xscale;
     move = key_left + key_right;
-    landAnim = 0;
+    landAnim = false;
     
     if (scr_solid(x + 1, y) && xscale == 1 && !place_meeting(x + 1, y, obj_slope))
     {
@@ -17,8 +17,8 @@ function scr_player_mach1() {
         movespeed = 0;
     }
     
-    machhitAnim = 0;
-    crouchslideAnim = 1;
+    machhitAnim = false;
+    crouchslideAnim = true;
     
     if (!place_meeting(x, y + 1, obj_railh) && !place_meeting(x, y + 1, obj_railh2))
         hsp = xscale * movespeed;
@@ -73,14 +73,14 @@ function scr_player_mach1() {
         image_index = 0;
     }
     
-    if (!key_jump2 && jumpstop == 0 && vsp < 0.5)
+    if (!key_jump2 && jumpstop == false && vsp < 0.5)
     {
         vsp /= 10;
         jumpstop = 1;
     }
     
     if (grounded && vsp > 0)
-        jumpstop = 0;
+        jumpstop = false;
     
     if (place_meeting(x + xscale, y, obj_solid) && !place_meeting(x + sign(hsp), y, obj_slope))
     {
@@ -116,7 +116,7 @@ function scr_player_mach1() {
         dir = xscale;
         momemtum = 1;
         vsp = -11;
-        jumpAnim = 1;
+        jumpAnim = true;
         image_index = 0;
     }
     
@@ -128,7 +128,7 @@ function scr_player_mach1() {
     
     if (key_down && !grounded)
     {
-        if (shotgunAnim == 0)
+        if (shotgunAnim == false)
         {
             image_index = 0;
             state = 90;

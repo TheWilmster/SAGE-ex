@@ -28,10 +28,10 @@ function scr_player_crouchslide() {
         state = 65;
         movespeed = 0;
         mach2 = 0;
-        crouchslideAnim = 1;
+        crouchslideAnim = true;
         image_index = 0;
-        crouchAnim = 1;
-        start_running = 1;
+        crouchAnim = true;
+        start_running = true;
         alarm[4] = 14;
     }
     
@@ -43,8 +43,8 @@ function scr_player_crouchslide() {
         vsp = -3;
         mach2 = 0;
         image_index = 0;
-        machslideAnim = 1;
-        machhitAnim = 0;
+        machslideAnim = true;
+        machhitAnim = false;
         instance_create(x + 10, y + 10, obj_bumpeffect);
     }
     
@@ -56,8 +56,8 @@ function scr_player_crouchslide() {
         vsp = -3;
         mach2 = 0;
         image_index = 0;
-        machslideAnim = 1;
-        machhitAnim = 0;
+        machslideAnim = true;
+        machhitAnim = false;
         instance_create(x - 10, y + 10, obj_bumpeffect);
     }
     

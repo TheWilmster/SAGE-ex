@@ -1,6 +1,5 @@
-function scr_sleep() {
+function scr_sleep(ms) {
     var time = current_time;
-    var ms = argument[0];
     
     do
     {

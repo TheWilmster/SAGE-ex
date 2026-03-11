@@ -2,8 +2,8 @@ function scr_player_shotgun() {
     hsp = xscale * movespeed;
     dir = xscale;
     movespeed = 0;
-    landAnim = 0;
-    momemtum = 1;
+    landAnim = false;
+    momemtum = true;
     
     if (floor(image_index) == (image_number - 1))
     {

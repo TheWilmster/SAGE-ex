@@ -1,6 +1,6 @@
 function scr_player_gameover() {
     image_speed = 0.35;
-    cutscene = 1;
+    cutscene = true;
     
     if (sprite_index == spr_deathstart)
     {
@@ -8,7 +8,7 @@ function scr_player_gameover() {
         hsp = 0;
     }
     
-    flash = 0;
+    flash = false;
     alarm[0] = -1;
     alarm[1] = -1;
     alarm[3] = -1;
@@ -26,8 +26,8 @@ function scr_player_gameover() {
         sprite_index = spr_deathend;
     }
     
-    hurted = 0;
-    inv_frames = 0;
+    hurted = false;
+    inv_frames = false;
     
     if (place_meeting(x + floor(hsp), y, obj_null))
     {

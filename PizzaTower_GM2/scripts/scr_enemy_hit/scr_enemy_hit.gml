@@ -5,7 +5,7 @@ function scr_enemy_hit() {
         state = 97;
     }
     
-    if (straightthrow == 1)
+    if (straightthrow == true)
         vsp = 0;
     
     if (vsp < 0 && floor(image_index) != 2 && sprite_index != flyingspr)

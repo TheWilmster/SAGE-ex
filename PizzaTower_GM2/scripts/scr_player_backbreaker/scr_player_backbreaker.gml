@@ -11,7 +11,7 @@ function scr_player_backbreaker() {
         hsp = xscale * movespeed;
     }
     
-    landAnim = 0;
+    landAnim = false;
     
     if (sprite_index == spr_player_machfreefall && place_meeting(x, y + 1, obj_solid))
     {

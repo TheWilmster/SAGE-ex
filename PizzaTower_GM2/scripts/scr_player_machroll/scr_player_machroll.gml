@@ -7,7 +7,7 @@ function scr_player_machroll() {
         hsp = (xscale * movespeed) + 5;
     
     mach2 = 100;
-    machslideAnim = 1;
+    machslideAnim = true;
     move = key_right + key_left;
     
     if ((scr_solid(x + 1, y) && xscale == 1) && !place_meeting(x + sign(hsp), y, obj_slope) && !place_meeting(x + sign(hsp), y, obj_destructibles))
@@ -15,12 +15,12 @@ function scr_player_machroll() {
         scr_soundeffect(sfx_bumpwall);
         hsp = 0;
         image_speed = 0.35;
-        flash = 0;
+        flash = false;
         combo = 0;
         state = 71;
         hsp = -2.5;
         vsp = -3;
-        mach2 = 0;
+        mach2 = false;
         image_index = 0;
         instance_create(x + 10, y + 10, obj_bumpeffect);
     }
@@ -30,8 +30,8 @@ function scr_player_machroll() {
         scr_soundeffect(sfx_bumpwall);
         hsp = 0;
         image_speed = 0.35;
-        flash = 0;
-        combo = 0;
+        flash = false;
+        combo = false;
         state = 71;
         hsp = 2.5;
         vsp = -3;

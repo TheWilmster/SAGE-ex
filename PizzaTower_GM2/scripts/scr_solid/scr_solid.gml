@@ -1,21 +1,21 @@
-function scr_solid() {
+function scr_solid(_x, _y) {
     var old_x = x;
     var old_y = y;
-    x = argument[0];
-    y = argument[1];
+	x = _x;
+	y = _y;
     
     if (place_meeting(x, y, obj_solid))
     {
         x = old_x;
         y = old_y;
-        return 1;
+        return true;
     }
     
     if (y > old_y && (bbox_bottom % 16) == 0 && !place_meeting(x, old_y, obj_platform) && place_meeting(x, y, obj_platform))
     {
         x = old_x;
         y = old_y;
-        return 1;
+        return true;
     }
     
     var slope = instance_place(x, y, obj_slope);
@@ -48,12 +48,12 @@ function scr_solid() {
             {
                 other.x = old_x;
                 other.y = old_y;
-                return 1;
+                return true;
             }
         }
     }
     
     x = old_x;
     y = old_y;
-    return 0;
+    return false;
 }

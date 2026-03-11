@@ -1,7 +1,7 @@
 function scr_player_knightpepslopes() {
     alarm[5] = 2;
     alarm[7] = 60;
-    hurted = 1;
+    hurted = true;
     hsp = xscale * movespeed;
     
     if (sprite_index == spr_knightpepdownslope)
@@ -51,7 +51,7 @@ function scr_player_knightpepslopes() {
         scr_soundeffect(sfx_loseknight);
         image_index = 0;
         obj_player.image_index = 0;
-        obj_player.flash = 1;
+        obj_player.flash = true;
         state = 71;
     }
     

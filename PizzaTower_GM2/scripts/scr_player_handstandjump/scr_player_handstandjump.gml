@@ -1,7 +1,7 @@
 function scr_player_handstandjump() {
     if (character == "P")
     {
-        landAnim = 0;
+        landAnim = false;
         hsp = xscale * movespeed;
         move = key_left + key_right;
         momemtum = 1;
@@ -12,10 +12,10 @@ function scr_player_handstandjump() {
         else if (!grounded)
             movespeed = 10;
         
-        if (!key_jump2 && jumpstop == 0 && vsp < 0.5 && stompAnim == 0)
+        if (!key_jump2 && jumpstop == false && vsp < 0.5 && stompAnim == false)
         {
             vsp /= 10;
-            jumpstop = 1;
+            jumpstop = true;
         }
         
         if (move != xscale && move != 0)
@@ -44,7 +44,7 @@ function scr_player_handstandjump() {
             sprite_index = spr_crouchslip;
             
             if (character == "P")
-                machhitAnim = 0;
+                machhitAnim = false;
             
             state = 67;
             movespeed = 15;
@@ -78,8 +78,8 @@ function scr_player_handstandjump() {
             vsp = -3;
             mach2 = 0;
             image_index = 0;
-            machslideAnim = 1;
-            machhitAnim = 0;
+            machslideAnim = true;
+            machhitAnim = false;
             instance_create(x + 10, y + 10, obj_bumpeffect);
         }
         
@@ -93,8 +93,8 @@ function scr_player_handstandjump() {
             vsp = -3;
             mach2 = 0;
             image_index = 0;
-            machslideAnim = 1;
-            machhitAnim = 0;
+            machslideAnim = true;
+            machhitAnim = false;
             instance_create(x - 10, y + 10, obj_bumpeffect);
         }
         

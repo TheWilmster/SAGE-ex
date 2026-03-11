@@ -1,147 +1,147 @@
-function scr_keyname() {
-    if (argument[0] == 37)
+function scr_keyname(key) {
+    if (key == 37)
         return "LEFT";
     
-    if (argument[0] == 39)
+    if (key == 39)
         return "RIGHT";
     
-    if (argument[0] == 38)
+    if (key == 38)
         return "UP";
     
-    if (argument[0] == 40)
+    if (key == 40)
         return "DOWN";
     
-    if (argument[0] == 13)
+    if (key == 13)
         return "ENTER";
     
-    if (argument[0] == 27)
+    if (key == 27)
         return "ESCAPE";
     
-    if (argument[0] == 32)
+    if (key == 32)
         return "SPACE";
     
-    if (argument[0] == 16)
+    if (key == 16)
         return "SHIFT";
     
-    if (argument[0] == 17)
+    if (key == 17)
         return "CONTROL";
     
-    if (argument[0] == 18)
+    if (key == 18)
         return "ALT";
     
-    if (argument[0] == 8)
+    if (key == 8)
         return "BACKSPACE";
     
-    if (argument[0] == 9)
+    if (key == 9)
         return "TAB";
     
-    if (argument[0] == 36)
+    if (key == 36)
         return "HOME";
     
-    if (argument[0] == 35)
+    if (key == 35)
         return "END";
     
-    if (argument[0] == 46)
+    if (key == 46)
         return "DELETE";
     
-    if (argument[0] == 45)
+    if (key == 45)
         return "INSERT";
     
-    if (argument[0] == 33)
+    if (key == 33)
         return "PAGE UP";
     
-    if (argument[0] == 34)
+    if (key == 34)
         return "PAGE DOWN";
     
-    if (argument[0] == 19)
+    if (key == 19)
         return "PAUSE";
     
-    if (argument[0] == 44)
+    if (key == 44)
         return "PRINTSCREEN";
     
-    if (argument[0] == 112)
+    if (key == 112)
         return "F1";
     
-    if (argument[0] == 113)
+    if (key == 113)
         return "F2";
     
-    if (argument[0] == 114)
+    if (key == 114)
         return "F3";
     
-    if (argument[0] == 115)
+    if (key == 115)
         return "F4";
     
-    if (argument[0] == 116)
+    if (key == 116)
         return "F5";
     
-    if (argument[0] == 117)
+    if (key == 117)
         return "F6";
     
-    if (argument[0] == 118)
+    if (key == 118)
         return "F7";
     
-    if (argument[0] == 119)
+    if (key == 119)
         return "F8";
     
-    if (argument[0] == 120)
+    if (key == 120)
         return "F9";
     
-    if (argument[0] == 121)
+    if (key == 121)
         return "F10";
     
-    if (argument[0] == 122)
+    if (key == 122)
         return "F11";
     
-    if (argument[0] == 123)
+    if (key == 123)
         return "F12";
     
-    if (argument[0] == 96)
+    if (key == 96)
         return "NUMPAD 0";
     
-    if (argument[0] == 97)
+    if (key == 97)
         return "NUMPAD 1";
     
-    if (argument[0] == 98)
+    if (key == 98)
         return "NUMPAD 2";
     
-    if (argument[0] == 99)
+    if (key == 99)
         return "NUMPAD 3";
     
-    if (argument[0] == 100)
+    if (key == 100)
         return "NUMPAD 4";
     
-    if (argument[0] == 101)
+    if (key == 101)
         return "NUMPAD 5";
     
-    if (argument[0] == 102)
+    if (key == 102)
         return "NUMPAD 6";
     
-    if (argument[0] == 103)
+    if (key == 103)
         return "NUMPAD 7";
     
-    if (argument[0] == 104)
+    if (key == 104)
         return "NUMPAD 8";
     
-    if (argument[0] == 105)
+    if (key == 105)
         return "NUMPAD 9";
     
-    if (argument[0] == 106)
+    if (key == 106)
         return "MULTIPLY";
     
-    if (argument[0] == 111)
+    if (key == 111)
         return "DIVIDE";
     
-    if (argument[0] == 107)
+    if (key == 107)
         return "ADD";
     
-    if (argument[0] == 109)
+    if (key == 109)
         return "SUBSTRACT";
     
-    if (argument[0] == 110)
+    if (key == 110)
         return "DECIMAL";
     
-    if (argument[0] == -1)
+    if (key == -1)
         return "PRESS KEY";
     
-    return chr(argument[0]);
+    return chr(key);
 }

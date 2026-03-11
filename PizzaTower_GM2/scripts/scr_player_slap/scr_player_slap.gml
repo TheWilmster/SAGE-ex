@@ -41,7 +41,7 @@ function scr_player_slap() {
             movespeed = 0;
     }
     
-    landAnim = 0;
+    landAnim = false;
     
     if (key_slap2 && sprite_index != spr_player_slapup && sprite_index != spr_player_slapdash)
         slapbuffer = 0;

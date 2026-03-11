@@ -51,7 +51,7 @@ function scr_player_freefallprep() {
         vsp += 14;
         state = 73;
         
-        if (shotgunAnim == 0)
+        if (shotgunAnim == false)
             sprite_index = spr_bodyslamfall;
         else
             sprite_index = spr_player_shotgunjump3;

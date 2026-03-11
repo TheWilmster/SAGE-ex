@@ -2,7 +2,7 @@ function scr_panicbg_start() {
     if (!variable_global_exists("panicbg_surface") || !surface_exists(global.panicbg_surface))
         global.panicbg_surface = surface_create(__view_get(2, 0), __view_get(3, 0));
     
-    if (event_type == ev_draw && event_number == 0)
+    if (event_type == ev_draw && event_number == ev_draw_normal)
     {
         surface_set_target(global.panicbg_surface);
         draw_clear_alpha(c_black, 0);

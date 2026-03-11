@@ -1,6 +1,4 @@
-function __view_get() {
-    var __prop = argument[0];
-    var __index = argument[1];
+function __view_get(__prop, __index) {
     var __res = -1;
     
     switch (__prop)

@@ -12,7 +12,7 @@ function scr_player_tacklecharge() {
     move2 = key_right2 + key_left2;
     move = key_right + key_left;
     movespeed = 10;
-    crouchslideAnim = 1;
+    crouchslideAnim = true;
     
     if (movespeed < 24 && move == xscale)
         movespeed += 0.05;
@@ -24,10 +24,10 @@ function scr_player_tacklecharge() {
         image_speed = 0.35;
     }
     
-    if (!key_jump2 && jumpstop == 0 && vsp < 0.5)
+    if (!key_jump2 && jumpstop == false && vsp < 0.5)
     {
         vsp /= 10;
-        jumpstop = 1;
+        jumpstop = true;
     }
     
     if (grounded && vsp > 0)
@@ -48,12 +48,12 @@ function scr_player_tacklecharge() {
     {
         with (baddiegrabbedID)
         {
-            grabbed = 0;
+            grabbed = false;
             grav = 0.5;
             instance_create(x, y, obj_bangeffect);
             instance_create(x, y, obj_slapstar);
             instance_create(x, y, obj_baddiegibs);
-            flash = 1;
+            flash = true;
             global.combotime = 60;
             global.hit += 1;
             
@@ -62,7 +62,7 @@ function scr_player_tacklecharge() {
             
             hp -= 5;
             alarm[1] = 5;
-            thrown = 1;
+            thrown = true;
             x = obj_player.x;
             y = obj_player.y;
             state = 104;
@@ -89,11 +89,11 @@ function scr_player_tacklecharge() {
     {
         with (baddiegrabbedID)
         {
-            grabbed = 0;
+            grabbed = false;
             grav = 0.5;
             instance_create(x, y, obj_slapstar);
             instance_create(x, y, obj_baddiegibs);
-            flash = 1;
+            flash = true;
             global.combotime = 60;
             global.hit += 1;
             
@@ -103,7 +103,7 @@ function scr_player_tacklecharge() {
             hp -= 2;
             alarm[1] = 5;
             grav = 0.5;
-            thrown = 1;
+            thrown = true;
             x = obj_player.x;
             y = obj_player.y;
             state = 104;

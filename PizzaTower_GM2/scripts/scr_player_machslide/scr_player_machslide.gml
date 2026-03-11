@@ -15,7 +15,7 @@ function scr_player_machslide() {
         sprite_index = spr_machslide;
     
     image_speed = 0.35;
-    landAnim = 0;
+    landAnim = false;
     
     if (floor(movespeed) <= 0 && (sprite_index == spr_machslide || sprite_index == spr_player_crouchslide))
     {
@@ -57,7 +57,7 @@ function scr_player_machslide() {
     
     if (sprite_index == spr_player_crouchslide && movespeed == 0 && grounded)
     {
-        facehurt = 1;
+        facehurt = true;
         state = 0;
         sprite_index = spr_player_facehurtup;
     }

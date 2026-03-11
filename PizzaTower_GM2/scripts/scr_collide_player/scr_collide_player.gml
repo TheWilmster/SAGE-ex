@@ -1,6 +1,6 @@
 function scr_collide_player() {
-    grounded = 0;
-    grinding = 0;
+    grounded = false;
+    grinding = false;
     
     repeat (abs(vsp))
     {

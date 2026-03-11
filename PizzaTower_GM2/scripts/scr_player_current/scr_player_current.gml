@@ -1,5 +1,5 @@
 function scr_player_current() {
-    landAnim = 1;
+    landAnim = true;
     movespeed = 4;
     mach2 = 0;
     

@@ -7,10 +7,10 @@ function scr_player_backkick() {
         {
             dir = xscale;
             movespeed = 2;
-            facehurt = 0;
+            facehurt = true;
         }
         
-        jumpstop = 0;
+        jumpstop = false;
         anger = 100;
         
         if (!place_meeting(x, y + 1, obj_railh) && !place_meeting(x, y + 1, obj_railh2))
@@ -95,7 +95,7 @@ function scr_player_backkick() {
             momemtum = 0;
         }
         
-        landAnim = 1;
+        landAnim = true;
         
         if (!key_jump2 && jumpstop == 0 && vsp < 0.5 && stompAnim == 0)
         {
@@ -116,13 +116,13 @@ function scr_player_backkick() {
             xscale = move;
     }
     
-    jumpAnim = 1;
-    dashAnim = 1;
-    landAnim = 0;
-    moveAnim = 1;
-    stopAnim = 1;
-    crouchslideAnim = 1;
-    crouchAnim = 1;
+    jumpAnim = true;
+    dashAnim = true;
+    landAnim = false;
+    moveAnim = true;
+    stopAnim = true;
+    crouchslideAnim = false;
+    crouchAnim = true;
     
     if (floor(image_index) == (image_number - 1))
         state = 0;

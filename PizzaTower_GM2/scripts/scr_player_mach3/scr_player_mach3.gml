@@ -29,16 +29,16 @@ function scr_player_mach3() {
         movespeed -= 0.1;
     }
     
-    crouchslideAnim = 1;
+    crouchslideAnim = true;
     
-    if (!key_jump2 && jumpstop == 0 && vsp < 0.5)
+    if (!key_jump2 && jumpstop == false && vsp < 0.5)
     {
         vsp /= 10;
-        jumpstop = 1;
+        jumpstop = true;
     }
     
     if (grounded && vsp > 0)
-        jumpstop = 0;
+        jumpstop = false;
     
     if (input_buffer_jump < 8 && grounded && !(move == 1 && xscale == -1) && !(move == -1 && xscale == 1))
     {
@@ -139,15 +139,15 @@ function scr_player_mach3() {
         {
             if (point_in_rectangle(x, y, __view_get(0, 0), __view_get(1, 0), __view_get(0, 0) + __view_get(2, 0), __view_get(1, 0) + __view_get(3, 0)))
             {
-                stun = 1;
+                stun = true;
                 alarm[0] = 200;
-                ministun = 0;
+                ministun = false;
                 vsp = -5;
                 hsp = 0;
             }
         }
         
-        flash = 0;
+        flash = false;
         state = 71;
         hsp = -2.5;
         vsp = -3;
@@ -170,7 +170,7 @@ function scr_player_mach3() {
         
         hsp = 0;
         image_speed = 0.35;
-        flash = 0;
+        flash = false;
         state = 71;
         hsp = 2.5;
         vsp = -3;

@@ -1,7 +1,7 @@
 function scr_player_cheesepepstick() {
     alarm[5] = 2;
     alarm[7] = 60;
-    hurted = 1;
+    hurted = true;
     
     if (place_meeting(x, y - 1, obj_railh))
     {

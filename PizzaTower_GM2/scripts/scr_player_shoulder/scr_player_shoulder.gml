@@ -7,10 +7,10 @@ function scr_player_shoulder() {
         {
             dir = xscale;
             movespeed = 2;
-            facehurt = 0;
+            facehurt = false;
         }
         
-        jumpstop = 0;
+        jumpstop = false;
         anger = 100;
         
         if (!place_meeting(x, y + 1, obj_railh) && !place_meeting(x, y + 1, obj_railh2))
@@ -92,12 +92,12 @@ function scr_player_shoulder() {
             momemtum = 0;
         }
         
-        landAnim = 1;
+        landAnim = true;
         
-        if (!key_jump2 && jumpstop == 0 && vsp < 0.5 && stompAnim == 0)
+        if (!key_jump2 && jumpstop == 0 && vsp < 0.5 && stompAnim == false)
         {
             vsp /= 5;
-            jumpstop = 1;
+            jumpstop = true;
         }
         
         if (ladderbuffer > 0)
@@ -106,17 +106,17 @@ function scr_player_shoulder() {
         if (scr_solid(x, y - 1) && jumpstop == 0 && jumpAnim == 1)
         {
             vsp = grav;
-            jumpstop = 1;
+            jumpstop = true;
         }
     }
     
-    jumpAnim = 1;
-    dashAnim = 1;
+    jumpAnim = true;
+    dashAnim = true;
     landAnim = 0;
-    moveAnim = 1;
-    stopAnim = 1;
-    crouchslideAnim = 1;
-    crouchAnim = 1;
+    moveAnim = true;
+    stopAnim = true;
+    crouchslideAnim = true;
+    crouchAnim = true;
     
     if (floor(image_index) == (image_number - 1))
         state = 0;

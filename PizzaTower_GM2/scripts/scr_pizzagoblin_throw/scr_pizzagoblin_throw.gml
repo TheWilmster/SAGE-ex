@@ -6,7 +6,7 @@ function scr_pizzagoblin_throw() {
         global.throw_frame[obj_cheeserobot] = 6;
         global.throw_frame[obj_spitcheese] = 2;
         global.throw_frame[obj_trash] = 2;
-        global.throw_frame[obj_invtrash] = 2;
+        global.throw_frame[obj_invtrash] = 2; 
         global.throw_frame[obj_robot] = 2;
         global.throw_frame[obj_kentukykenny] = 8;
         global.throw_frame[obj_pizzard] = 6;

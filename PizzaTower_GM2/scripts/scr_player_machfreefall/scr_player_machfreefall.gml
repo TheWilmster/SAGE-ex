@@ -10,15 +10,15 @@ function scr_player_machfreefall() {
         movespeed = 10;
     }
     
-    machslideAnim = 1;
+    machslideAnim = true;
     move2 = key_right2 + key_left2;
     move = key_right + key_left;
-    crouchslideAnim = 1;
+    crouchslideAnim = true;
     sprite_index = spr_player_machfreefall;
     
     if (scr_solid(x + 1, y) && image_xscale == 1)
     {
-        machhitAnim = 0;
+        machhitAnim = false;
         state = 71;
         hsp = -2.5;
         vsp = -2.5;
@@ -32,7 +32,7 @@ function scr_player_machfreefall() {
     }
     else if (scr_solid(x - 1, y) && image_xscale == -1)
     {
-        machhitAnim = 0;
+        machhitAnim = false;
         state = 71;
         hsp = 2.5;
         vsp = -2.5;
@@ -53,16 +53,16 @@ function scr_player_machfreefall() {
             shake_mag_acc = 40 / room_speed;
         }
         
-        bounce = 0;
+        bounce = false;
         state = 76;
-        jumpstop = 0;
+        jumpstop = false;
         image_index = 0;
         
         with (instance_create(x, y + 35, obj_bangeffect))
             image_xscale = obj_player.image_xscale;
         
         instance_create(x, y, obj_landcloud);
-        freefallstart = 0;
+        freefallstart = false;
         audio_sound_gain(sfx_land, 0.7, 0);
         
         if (!audio_is_playing(sfx_land))
@@ -89,17 +89,17 @@ function scr_player_machfreefall() {
     if (grounded && input_buffer_jump < 8 && vsp > 0)
     {
         sprite_index = spr_player_hanstandjump;
-        stompAnim = 0;
+        stompAnim = false;
         hsp = 0;
         state = 21;
-        jumpAnim = 1;
-        jumpstop = 0;
+        jumpAnim = true;
+        jumpstop = false;
         image_index = 0;
         
         if (!place_meeting(x, y, obj_water2))
             instance_create(x, y, obj_landcloud);
         
-        freefallstart = 0;
+        freefallstart = false;
     }
     
     if (key_jump)

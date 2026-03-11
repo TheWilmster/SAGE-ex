@@ -1,7 +1,7 @@
 function scr_player_chainsawbump() {
     movespeed = 0;
     mach2 = 0;
-    start_running = 1;
+    start_running = true;
     alarm[4] = 14;
     
     if (grounded && vsp > 0)

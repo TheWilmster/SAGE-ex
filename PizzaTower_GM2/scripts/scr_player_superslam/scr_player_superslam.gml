@@ -14,7 +14,7 @@ function scr_player_superslam() {
     {
         scr_soundeffect(sfx_groundpound);
         sprite_index = spr_player_piledriverland;
-        jumpAnim = 1;
+        jumpAnim = true;
         image_index = 0;
         
         with (obj_camera)
@@ -30,7 +30,7 @@ function scr_player_superslam() {
             xscale = obj_player.xscale;
         
         instance_create(x, y, obj_landcloud);
-        freefallstart = 0;
+        freefallstart = false;
         
         with (obj_baddie)
         {
@@ -43,14 +43,14 @@ function scr_player_superslam() {
         }
     }
     
-    jumpAnim = 1;
-    dashAnim = 1;
-    landAnim = 0;
-    machslideAnim = 1;
-    moveAnim = 1;
-    stopAnim = 1;
-    crouchslideAnim = 1;
-    crouchAnim = 1;
+    jumpAnim = true;
+    dashAnim = true;
+    landAnim = false;
+    machslideAnim = true;
+    moveAnim = true;
+    stopAnim = true;
+    crouchslideAnim = true;
+    crouchAnim = true;
     
     if (move != 0)
     {

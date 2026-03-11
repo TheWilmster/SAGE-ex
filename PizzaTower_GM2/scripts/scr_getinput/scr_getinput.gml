@@ -22,9 +22,9 @@ function scr_getinput() {
     key_escape = keyboard_check_pressed(vk_escape) || gamepad_button_check(0, gp_select);
     
     if ((gamepad_axis_value(0, gp_axislh) > 0.5 || gamepad_axis_value(0, gp_axislh) < -0.5) || (gamepad_axis_value(0, gp_axislv) > 0.5 || gamepad_axis_value(0, gp_axislv) < -0.5))
-        stickpressed = 1;
+        stickpressed = true;
     else
-        stickpressed = 0;
+        stickpressed = false;
     
     if (keyboard_check_pressed(vk_f1))
     {
@@ -74,7 +74,7 @@ function scr_getinput() {
         with (obj_tv)
         {
             message = "CONTROLS RESET";
-            showtext = 1;
+            showtext = true;
             alarm[0] = 150;
         }
     }

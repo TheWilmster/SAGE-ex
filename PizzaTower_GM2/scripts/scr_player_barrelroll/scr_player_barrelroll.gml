@@ -15,7 +15,7 @@ function scr_player_barrelroll() {
     
     if (scr_solid(x + 1, y) && image_xscale == 1)
     {
-        barrel = 0;
+        barrel = false;
         mask_index = spr_player_mask;
         state = 71;
         hsp = -2;
@@ -37,7 +37,7 @@ function scr_player_barrelroll() {
     
     if (scr_solid(x - 1, y) && image_xscale == -1)
     {
-        barrel = 0;
+        barrel = false;
         mask_index = spr_player_mask;
         state = 71;
         hsp = 2;

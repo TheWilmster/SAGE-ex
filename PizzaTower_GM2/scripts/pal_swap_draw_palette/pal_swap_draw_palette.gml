@@ -1,3 +1,3 @@
-function pal_swap_draw_palette() {
-    draw_sprite_part(argument[0], 0, argument[1], 0, 1, sprite_get_height(argument[0]), argument[2], argument[3]);
+function pal_swap_draw_palette(palette, column, x, y) {
+    draw_sprite_part(palette, 0, column, 0, 1, sprite_get_height(palette), x, y);
 }

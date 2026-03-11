@@ -34,14 +34,14 @@ function scr_player_mach2() {
     
     crouchslideAnim = 1;
     
-    if (!key_jump2 && jumpstop == 0 && vsp < 0.5)
+    if (!key_jump2 && jumpstop == false && vsp < 0.5)
     {
         vsp /= 10;
-        jumpstop = 1;
+        jumpstop = true;
     }
     
     if (grounded && vsp > 0)
-        jumpstop = 0;
+        jumpstop = false;
     
     if (input_buffer_jump < 8 && grounded && !(move == 1 && xscale == -1) && !(move == -1 && xscale == 1))
     {
@@ -53,13 +53,13 @@ function scr_player_mach2() {
     
     if (grounded && vsp > 0)
     {
-        if (machpunchAnim == 0 && sprite_index != spr_mach && sprite_index != spr_player_mach3 && sprite_index != spr_player_machhit)
+        if (machpunchAnim == false && sprite_index != spr_mach && sprite_index != spr_player_mach3 && sprite_index != spr_player_machhit)
         {
             if (sprite_index != spr_player_machhit && sprite_index != spr_player_rollgetup)
                 sprite_index = spr_mach;
         }
         
-        if (machpunchAnim == 1)
+        if (machpunchAnim == true)
         {
             if (punch == 0)
                 sprite_index = spr_machpunch1;
@@ -69,20 +69,20 @@ function scr_player_mach2() {
             
             if (floor(image_index) == 4 && sprite_index == spr_machpunch1)
             {
-                punch = 1;
-                machpunchAnim = 0;
+                punch = true;
+                machpunchAnim = false;
             }
             
             if (floor(image_index) == 4 && sprite_index == spr_machpunch2)
             {
-                punch = 0;
-                machpunchAnim = 0;
+                punch = true;
+                machpunchAnim = false;
             }
         }
     }
     
     if (!grounded)
-        machpunchAnim = 0;
+        machpunchAnim = false;
     
     if (grounded)
     {
@@ -92,9 +92,9 @@ function scr_player_mach2() {
         if (movespeed >= 12)
         {
             movespeed = 12;
-            machhitAnim = 0;
+            machhitAnim = false;
             state = 89;
-            flash = 1;
+            flash = true;
             
             if (sprite_index != spr_player_rollgetup)
                 sprite_index = spr_mach4;

@@ -1,7 +1,7 @@
 function scr_player_ejected() {
     if (y > (room_height + 100) && !instance_exists(obj_fadeout))
     {
-        landAnim = 0;
+        landAnim = false;
         instance_create(x, y, obj_fadeout);
         targetRoom = lastroom;
         player_x = lastroom_x;
@@ -16,8 +16,8 @@ function scr_player_ejected() {
     
     x += hsp;
     y += floor(vsp);
-    hurted = 0;
-    cutscene = 1;
+    hurted = false;
+    cutscene = true;
     inv_frames = 0;
     alarm[8] = -1;
     alarm[7] = -1;

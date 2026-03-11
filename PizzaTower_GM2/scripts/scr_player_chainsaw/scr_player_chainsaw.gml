@@ -1,5 +1,5 @@
 function scr_player_chainsaw() {
-    landAnim = 0;
+    landAnim = false;
     hsp = xscale * movespeed;
     
     if (movespeed > 0)

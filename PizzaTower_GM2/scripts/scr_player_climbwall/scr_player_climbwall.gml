@@ -3,13 +3,13 @@ function scr_player_climbwall() {
         windingAnim++;
     
     move = key_left + key_right;
-    suplexmove = 0;
+    suplexmove = false;
     vsp = -wallspeed;
     
     if (wallspeed < 24 && move == xscale)
         wallspeed += 0.05;
     
-    crouchslideAnim = 1;
+    crouchslideAnim = true;
     sprite_index = spr_machclimbwall;
     
     if ((!key_attack && character == "P") || (move != xscale && move != 0) || (move != xscale && character == "S"))
@@ -24,7 +24,7 @@ function scr_player_climbwall() {
         scr_soundeffect(sfx_groundpound);
         image_index = 0;
         state = 91;
-        machhitAnim = 0;
+        machhitAnim = false;
     }
     
     if (!scr_solid(x + xscale, y))
@@ -50,7 +50,7 @@ function scr_player_climbwall() {
         sprite_index = spr_walljumpstart;
         vsp = -11;
         xscale *= -1;
-        jumpstop = 0;
+        jumpstop = false;
     }
     
     if ((grounded && wallspeed <= 0) || wallspeed <= 0)

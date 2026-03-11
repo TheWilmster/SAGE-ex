@@ -23,7 +23,7 @@ function scr_player_barrelnormal() {
     {
         movespeed = 0;
         state = 81;
-        landAnim = 0;
+        landAnim = false;
     }
     
     if (place_meeting(x, y, obj_water2))

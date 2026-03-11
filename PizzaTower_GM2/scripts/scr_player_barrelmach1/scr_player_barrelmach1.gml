@@ -16,7 +16,7 @@ function scr_player_barrelmach1() {
         {
             image_index = 0;
             state = 84;
-            flash = 1;
+            flash = true;
         }
     }
     

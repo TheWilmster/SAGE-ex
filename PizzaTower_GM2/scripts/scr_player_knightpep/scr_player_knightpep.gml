@@ -1,7 +1,7 @@
 function scr_player_knightpep() {
     alarm[5] = 2;
     alarm[7] = 60;
-    global.SAGEknighttaken = 1;
+    global.SAGEknighttaken = true;
     
     if (sprite_index == spr_knightpepwalk || sprite_index == spr_knightpepjump || sprite_index == spr_knightpepfall || sprite_index == spr_knightpepidle)
     {
@@ -17,14 +17,14 @@ function scr_player_knightpep() {
     if (key_jump)
         input_buffer_jump = 0;
     
-    if (!key_jump2 && jumpstop == 0 && vsp < 0.5 && stompAnim == 0)
+    if (!key_jump2 && jumpstop == false && vsp < 0.5 && stompAnim == false)
     {
         vsp /= 2;
-        jumpstop = 1;
+        jumpstop = true;
     }
     
     if (grounded && vsp > 0)
-        jumpstop = 0;
+        jumpstop = false;
     
     if (dir != xscale)
     {
@@ -78,10 +78,10 @@ function scr_player_knightpep() {
         }
         
         combo = 0;
-        bounce = 0;
+        bounce = false;
         image_index = 0;
-        freefallstart = 0;
-        momemtum = 0;
+        freefallstart = false;
+        momemtum = false;
         scr_soundeffect(sfx_groundpound);
         instance_create(x, y, obj_landcloud);
         sprite_index = spr_knightpepland;
@@ -137,9 +137,9 @@ function scr_player_knightpep() {
     if (!instance_exists(obj_cloudeffect) && grounded && move != 0 && (floor(image_index) == 4 || floor(image_index) == 10))
         instance_create(x, y + 43, obj_cloudeffect);
     
-    if (move != 0 && (floor(image_index) == 3 || floor(image_index) == 8) && steppy == 0)
-        steppy = 1;
+    if (move != 0 && (floor(image_index) == 3 || floor(image_index) == 8) && steppy == true)
+        steppy = true;
     
     if (move != 0 && floor(image_index) != 3 && floor(image_index) != 8)
-        steppy = 0;
+        steppy = false;
 }

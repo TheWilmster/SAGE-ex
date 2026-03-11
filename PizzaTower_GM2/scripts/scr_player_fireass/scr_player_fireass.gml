@@ -53,10 +53,10 @@ function scr_player_fireass() {
         if (floor(image_index) == (image_number - 1))
         {
             movespeed = 0;
-            landAnim = 0;
+            landAnim = false;
             alarm[5] = 2;
             alarm[7] = 60;
-            hurted = 1;
+            hurted = true;
             state = 0;
             sprite_index = spr_idle;
             image_index = 0;

@@ -15,17 +15,17 @@ function scr_player_firemouth() {
     if (key_jump)
         input_buffer_jump = 0;
     
-    if (!key_jump2 && jumpstop == 0 && vsp < 0.5 && stompAnim == 0)
+    if (!key_jump2 && jumpstop == false && vsp < 0.5 && stompAnim == false)
     {
         vsp /= 2;
-        jumpstop = 1;
+        jumpstop = true;
     }
     
     if (grounded && vsp > 0)
-        jumpstop = 0;
+        jumpstop = false;
     
     mach2 = 0;
-    landAnim = 0;
+    landAnim = false;
     scr_getinput();
     alarm[5] = 2;
     
@@ -49,15 +49,15 @@ function scr_player_firemouth() {
     {
         alarm[5] = 2;
         alarm[7] = 60;
-        hurted = 1;
-        state = 0;
+        hurted = true;
+        state = false;
         sprite_index = spr_player_idle;
         image_index = 0;
     }
     
     if (key_slap2 && sprite_index == spr_player_firemouth && sprite_index != spr_player_firemouthshoot && !instance_exists(obj_firemouth_projectile))
     {
-        movespeed = 0;
+        movespeed = false;
         image_index = 0;
         sprite_index = spr_player_firemouthshoot;
     }
@@ -103,11 +103,11 @@ function scr_player_firemouth() {
         image_speed = 0.35;
     }
     
-    if (hsp != 0 && (floor(image_index) == 0 || floor(image_index) == 2) && steppy == 0 && grounded)
-        steppy = 1;
+    if (hsp != 0 && (floor(image_index) == 0 || floor(image_index) == 2) && steppy == false && grounded)
+        steppy = true;
     
     if (floor(image_index) != 0 && floor(image_index) != 2)
-        steppy = 0;
+        steppy = false;
     
     if (!instance_exists(obj_dashcloud) && grounded && hsp != 0)
         instance_create(x, y, obj_dashcloud);

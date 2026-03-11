@@ -22,14 +22,14 @@ function scr_player_slam() {
     if (xscale == -1 && move == 1)
         movespeed = 0;
     
-    jumpAnim = 1;
-    dashAnim = 1;
-    landAnim = 0;
-    machslideAnim = 1;
-    moveAnim = 1;
-    stopAnim = 1;
-    crouchslideAnim = 1;
-    crouchAnim = 1;
+    jumpAnim = true;
+    dashAnim = true;
+    landAnim = false;
+    machslideAnim = true;
+    moveAnim = true;
+    stopAnim = true;
+    crouchslideAnim = true;
+    crouchAnim = true;
     
     if (floor(image_index) == 8)
         state = 0;
@@ -41,9 +41,9 @@ function scr_player_slam() {
     {
         image_speed = 0;
     }
-    else if (grounded && slamming == 0 && vsp > 0)
+    else if (grounded && slamming == false && vsp > 0)
     {
-        slamming = 1;
+        slamming = true;
         hsp = 0;
         image_speed = 0.35;
         

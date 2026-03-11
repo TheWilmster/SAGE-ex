@@ -1,14 +1,14 @@
 function scr_player_Sjump() {
     hsp = 0;
     mach2 = 0;
-    jumpAnim = 1;
-    dashAnim = 1;
-    landAnim = 0;
-    moveAnim = 1;
-    stopAnim = 1;
-    crouchslideAnim = 1;
-    crouchAnim = 0;
-    machhitAnim = 0;
+    jumpAnim = true;
+    dashAnim = true;
+    landAnim = false;
+    moveAnim = true;
+    stopAnim = true;
+    crouchslideAnim = true;
+    crouchAnim = false;
+    machhitAnim = false;
     
     if (sprite_index == spr_superjump)
         vsp = -15;
@@ -52,15 +52,15 @@ function scr_player_Sjump() {
         scr_soundeffect(sfx_groundpound);
         image_index = 0;
         state = 91;
-        machhitAnim = 0;
+        machhitAnim = false
     }
     
     if (key_attack2)
     {
         movespeed = 12;
-        machhitAnim = 0;
+        machhitAnim = false;
         state = 89;
-        flash = 1;
+        flash = true;
         sprite_index = spr_mach4;
         instance_create(x, y, obj_jumpdust);
     }

@@ -11,7 +11,7 @@ function scr_enemy_stun() {
         if (thrown == 1 && hp <= 0)
             instance_destroy();
         
-        thrown = 0;
+        thrown = false;
         grav = 0.5;
         hsp = 0;
     }
@@ -26,10 +26,10 @@ function scr_enemy_stun() {
         with (instance_create(x, y, obj_bulletimpact))
             image_xscale = -other.image_xscale;
         
-        if (thrown == 1)
+        if (thrown == true)
             instance_destroy();
         
-        thrown = 0;
+        thrown = false;
         grav = 0.5;
         image_xscale *= -1;
         hsp = -image_xscale * 4;

@@ -5,7 +5,7 @@ function scr_fakepeppino_hit() {
     {
         with (obj_player)
         {
-            if (state != 72 && hurted == 0 && cutscene == 0 && state != 71)
+            if (state != 72 && hurted == false && cutscene == 0 && state != 71)
             {
                 if (state != 50)
                 {
@@ -45,7 +45,7 @@ function scr_fakepeppino_hit() {
             
             alarm[8] = 60;
             alarm[7] = 120;
-            hurted = 1;
+            hurted = true;
             
             if (xscale == other.image_xscale)
                 sprite_index = spr_hurtjump;

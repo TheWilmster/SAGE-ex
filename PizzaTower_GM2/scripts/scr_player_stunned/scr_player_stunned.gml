@@ -2,24 +2,24 @@ function scr_player_stunned() {
     hsp = 0;
     combo = 0;
     mach2 = 0;
-    bounce = 0;
-    jumpAnim = 1;
-    dashAnim = 1;
+    bounce = false;
+    jumpAnim = true;
+    dashAnim = true;
     
     if (grounded)
         landAnim = 0;
     else
-        landAnim = 1;
+        landAnim = true;
     
-    jumpstop = 0;
-    moveAnim = 1;
-    stopAnim = 1;
-    crouchslideAnim = 1;
-    crouchAnim = 0;
-    machhitAnim = 0;
+    jumpstop = false;
+    moveAnim = true;
+    stopAnim = true;
+    crouchslideAnim = true;
+    crouchAnim = false;
+    machhitAnim = false;
     movespeed = 0;
-    hurted = 1;
-    turning = 0;
+    hurted = true;
+    turning = false;
     alarm[5] = 2;
     alarm[7] = 60;
     image_speed = 0.35;

@@ -1,6 +1,6 @@
 function scr_player_skateboard() {
-    machhitAnim = 0;
-    crouchslideAnim = 1;
+    machhitAnim = false;
+    crouchslideAnim = true;
     hsp = xscale * movespeed;
     
     if (key_jump)
@@ -18,7 +18,7 @@ function scr_player_skateboard() {
     
     if (scr_solid(x + 1, y) && xscale == 1)
     {
-        machhitAnim = 0;
+        machhitAnim = false;
         state = 71;
         hsp = -2.5;
         vsp = -3;
@@ -30,7 +30,7 @@ function scr_player_skateboard() {
     }
     else if (scr_solid(x - 1, y) && xscale == -1)
     {
-        machhitAnim = 0;
+        machhitAnim = false;
         state = 71;
         hsp = 2.5;
         vsp = -3;

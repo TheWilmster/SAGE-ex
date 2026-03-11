@@ -1,19 +1,4 @@
-function __background_set_element() {
-    var __bind = argument[0];
-    var __vis = argument[1];
-    var __fore = argument[2];
-    var __back = argument[3];
-    var __x = argument[4];
-    var __y = argument[5];
-    var __htiled = argument[6];
-    var __vtiled = argument[7];
-    var __xscale = argument[8];
-    var __yscale = argument[9];
-    var __stretch = argument[10];
-    var __hspeed = argument[11];
-    var __vspeed = argument[12];
-    var __blend = argument[13];
-    var __alpha = argument[14];
+function __background_set_element(__bind, __vis, __fore, __back, __x, __y, __htiled, __vtiled, __xscale, __yscale, __stretch, __hspeed, __vspeed, __blend, __alpha) {
     var __nearestdepth = 1000000000;
     var __farthestdepth = -1000000000;
     var __depthinc = 100;

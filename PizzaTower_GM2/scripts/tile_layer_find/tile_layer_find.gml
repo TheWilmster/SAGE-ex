@@ -1,7 +1,4 @@
-function tile_layer_find() {
-    var __depth = argument[0];
-    var __x = argument[1];
-    var __y = argument[2];
+function tile_layer_find(__depth, __x, __y) {
     var __layers = layer_get_all();
     var __numlayers = array_length_1d(__layers);
     

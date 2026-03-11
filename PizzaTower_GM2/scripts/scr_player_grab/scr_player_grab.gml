@@ -8,10 +8,10 @@ function scr_player_grab() {
         {
             dir = xscale;
             movespeed = 2;
-            facehurt = 0;
+            facehurt = false;
         }
         
-        jumpstop = 0;
+        jumpstop = false;
         anger = 100;
         
         if (!place_meeting(x, y + 1, obj_railh) && !place_meeting(x, y + 1, obj_railh2))
@@ -21,7 +21,7 @@ function scr_player_grab() {
         else if (place_meeting(x, y + 1, obj_railh2))
             hsp = (move * movespeed) + 5;
         
-        if (heavy == 0)
+        if (heavy == false)
         {
             if (move != 0)
             {
@@ -80,7 +80,7 @@ function scr_player_grab() {
         {
             dir = xscale;
             movespeed = 2;
-            facehurt = 0;
+            facehurt = false;
         }
         
         if (move != xscale)
@@ -110,7 +110,7 @@ function scr_player_grab() {
         {
             dir = xscale;
             movespeed = 2;
-            facehurt = 0;
+            facehurt = false;
         }
         
         if (move == -xscale)
@@ -119,21 +119,21 @@ function scr_player_grab() {
             momemtum = 0;
         }
         
-        landAnim = 1;
+        landAnim = true;
         
-        if (!key_jump2 && jumpstop == 0 && vsp < 0.5 && stompAnim == 0)
+        if (!key_jump2 && jumpstop == false && vsp < 0.5 && stompAnim == false)
         {
             vsp /= 10;
-            jumpstop = 1;
+            jumpstop = true;
         }
         
         if (ladderbuffer > 0)
             ladderbuffer--;
         
-        if (scr_solid(x, y - 1) && jumpstop == 0 && jumpAnim == 1)
+        if (scr_solid(x, y - 1) && jumpstop == false && jumpAnim == true)
         {
             vsp = grav;
-            jumpstop = 1;
+            jumpstop = true;
         }
         
         if (move != 0 && sprite_index != spr_player_swingding)
@@ -141,15 +141,15 @@ function scr_player_grab() {
     }
     
     if (key_jump)
-        input_buffer_jump = 0;
+        input_buffer_jump = false;
     
-    if ((grounded && input_buffer_jump < 8 && !key_down && !key_attack && vsp > 0) && sprite_index != spr_player_swingding)
+    if ((grounded && input_buffer_jump < false && !key_down && !key_attack && vsp > 0) && sprite_index != spr_player_swingding)
     {
         scr_soundeffect(sfx_jump);
         sprite_index = spr_player_haulingjump;
         instance_create(x, y, obj_highjumpcloud2);
         
-        if (heavy == 0)
+        if (heavy == false)
             vsp = -11;
         else
             vsp = -6;
@@ -230,17 +230,17 @@ function scr_player_grab() {
     if (key_down && grounded)
     {
         state = 65;
-        landAnim = 0;
-        crouchAnim = 1;
+        landAnim = false;
+        crouchAnim = true;
         image_index = 0;
         idle = 0;
     }
     
-    if (move != 0 && (floor(image_index) == 3 || floor(image_index) == 8) && steppy == 0)
-        steppy = 1;
+    if (move != 0 && (floor(image_index) == 3 || floor(image_index) == 8) && steppy == false)
+        steppy = true;
     
     if (move != 0 && floor(image_index) != 3 && floor(image_index) != 8)
-        steppy = 0;
+        steppy = false;
     
     if (sprite_index != spr_player_swingding)
         image_speed = 0.35;

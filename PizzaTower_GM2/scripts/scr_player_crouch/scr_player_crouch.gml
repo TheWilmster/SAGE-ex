@@ -13,14 +13,14 @@ function scr_player_crouch() {
     
     movespeed = 4;
     mask_index = spr_crouchmask;
-    turning = 0;
+    turning = false;
     
     if (!grounded && !key_jump)
     {
-        jumpAnim = 0;
+        jumpAnim = false;
         state = 66;
         movespeed = 4;
-        crouchAnim = 1;
+        crouchAnim = true;
         image_index = 0;
     }
     
@@ -31,17 +31,17 @@ function scr_player_crouch() {
     {
         state = 0;
         movespeed = 0;
-        crouchAnim = 1;
-        jumpAnim = 1;
+        crouchAnim = true;
+        jumpAnim = true;
         image_index = 0;
         mask_index = spr_player_mask;
     }
     
-    if (crouchAnim == 0)
+    if (crouchAnim == false)
     {
         if (move == 0)
         {
-            if (shotgunAnim == 0)
+            if (shotgunAnim == false)
                 sprite_index = spr_crouch;
             else
                 sprite_index = spr_shotgun_duck;
@@ -49,31 +49,31 @@ function scr_player_crouch() {
         
         if (move != 0)
         {
-            if (shotgunAnim == 0)
+            if (shotgunAnim == false)
                 sprite_index = spr_crawl;
             else
                 sprite_index = spr_shotgun_crawl;
         }
     }
     
-    if (crouchAnim == 1)
+    if (crouchAnim == true)
     {
-        if (move == 0)
+        if (move == false)
         {
-            if (shotgunAnim == 0)
+            if (shotgunAnim == false)
                 sprite_index = spr_couchstart;
             else
                 sprite_index = spr_shotgun_goduck;
             
             if (floor(image_index) == (image_number - 1))
-                crouchAnim = 0;
+                crouchAnim = false;
         }
     }
     
     if (move != 0)
     {
         xscale = move;
-        crouchAnim = 0;
+        crouchAnim = false;
     }
     
     if (key_jump && grounded && !scr_solid(x, y - 16) && !scr_solid(x, y - 32) && character == "P")
@@ -83,8 +83,8 @@ function scr_player_crouch() {
         state = 66;
         movespeed = 4;
         image_index = 0;
-        crouchAnim = 1;
-        jumpAnim = 1;
+        crouchAnim = true;
+        jumpAnim = true;
     }
     
     if (scr_slope())

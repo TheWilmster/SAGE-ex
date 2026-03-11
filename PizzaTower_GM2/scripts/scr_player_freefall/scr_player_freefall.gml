@@ -63,8 +63,8 @@ function scr_player_freefall() {
         
         image_index = 0;
         state = 76;
-        jumpAnim = 1;
-        jumpstop = 0;
+        jumpAnim = true;
+        jumpstop = false;
         
         with (obj_baddie)
         {
@@ -82,7 +82,7 @@ function scr_player_freefall() {
         }
         
         combo = 0;
-        bounce = 0;
+        bounce = false;
         instance_create(x, y, obj_landcloud);
         freefallstart = 0;
     }
