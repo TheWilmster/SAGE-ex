@@ -1,5 +1,5 @@
 function scr_player_jump() {
-    if (momemtum == 0)
+    if (momemtum == false)
         hsp = move * movespeed;
     else
         hsp = xscale * movespeed;
@@ -17,7 +17,7 @@ function scr_player_jump() {
     move = key_left + key_right;
     
     if (movespeed == 0)
-        momemtum = 0;
+        momemtum = false;
     
     if (scr_solid(x + hsp, y))
     {

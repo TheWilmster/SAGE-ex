@@ -4,7 +4,7 @@ function scr_player_handstandjump() {
         landAnim = false;
         hsp = xscale * movespeed;
         move = key_left + key_right;
-        momemtum = 1;
+        momemtum = true;
         dir = xscale;
         
         if (movespeed < 10 && grounded)

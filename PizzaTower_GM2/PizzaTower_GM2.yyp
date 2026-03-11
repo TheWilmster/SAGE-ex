@@ -36,6 +36,8 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Enemies","folderPath":"folders/Scripts/Enemies.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Utilities","folderPath":"folders/Scripts/Utilities.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sound","folderPath":"folders/Scripts/Systems/Sound.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Music","folderPath":"folders/Sounds/Music.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"SFX","folderPath":"folders/Sounds/SFX.yy",},
   ],
   "IncludedFiles": [],
   "isEcma": false,

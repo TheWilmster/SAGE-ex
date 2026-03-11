@@ -485,7 +485,7 @@ if (state != 0)
 }
 
 if (state != 68 && state != 57 && state != 8 && state != 21 && state != 0 && state != 69 && state != 89 && state != 90 && state != 23 && state != 37 && state != 17)
-    momemtum = 0;
+    momemtum = false;
 
 if (state != 62 && state != 64)
     a = 0;

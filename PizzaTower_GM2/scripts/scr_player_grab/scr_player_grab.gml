@@ -86,16 +86,16 @@ function scr_player_grab() {
         if (move != xscale)
             movespeed = 2;
         
-        if (momemtum == 0)
+        if (momemtum == false)
             hsp = move * movespeed;
         else
             hsp = xscale * movespeed;
         
-        if (move != xscale && momemtum == 1 && movespeed != 0)
+        if (move != xscale && momemtum == true && movespeed != 0)
             movespeed -= 0.05;
         
         if (movespeed == 0)
-            momemtum = 0;
+            momemtum = false;
         
         if (move != 0 && movespeed < 6)
             movespeed += 0.5;
@@ -116,7 +116,7 @@ function scr_player_grab() {
         if (move == -xscale)
         {
             mach2 = 0;
-            momemtum = 0;
+            momemtum = false;
         }
         
         landAnim = true;

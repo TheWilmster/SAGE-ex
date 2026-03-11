@@ -7,13 +7,13 @@ function scr_player_freefall() {
     {
         hsp = move * movespeed;
         
-        if (move != xscale && momemtum == 1 && movespeed != 0)
+        if (move != xscale && momemtum == true && movespeed != 0)
             movespeed -= 0.05;
         
         if (movespeed == 0)
-            momemtum = 0;
+            momemtum = false;
         
-        if ((move == 0 && momemtum == 0) || scr_solid(x + hsp, y))
+        if ((move == 0 && momemtum == false) || scr_solid(x + hsp, y))
         {
             movespeed = 0;
             mach2 = 0;
@@ -39,7 +39,7 @@ function scr_player_freefall() {
         {
             mach2 = 0;
             movespeed = 0;
-            momemtum = 0;
+            momemtum = false;
         }
         
         if (move != 0)

@@ -30,7 +30,7 @@ function scr_player_mach1() {
     if (xscale == 1 && move == -1)
     {
         sprite_index = spr_mach1;
-        momemtum = 0;
+        momemtum = false;
         mach2 = 0;
         movespeed = 6;
         image_index = 0;
@@ -40,7 +40,7 @@ function scr_player_mach1() {
     if (xscale == -1 && move == 1)
     {
         sprite_index = spr_mach1;
-        momemtum = 0;
+        momemtum = false;
         mach2 = 0;
         movespeed = 6;
         image_index = 0;

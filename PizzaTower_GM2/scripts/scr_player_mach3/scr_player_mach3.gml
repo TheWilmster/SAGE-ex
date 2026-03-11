@@ -13,7 +13,7 @@ function scr_player_mach3() {
         hsp = (xscale * movespeed) + 5;
     
     mach2 = 100;
-    momemtum = 1;
+    momemtum = true;
     move = key_right + key_left;
     move2 = key_right2 + key_left2;
     

@@ -285,7 +285,7 @@ function scr_player_normal() {
     if (movespeed > 6)
         movespeed -= 0.1;
     
-    momemtum = 0;
+    momemtum = false;
     
     if (move != 0)
     {

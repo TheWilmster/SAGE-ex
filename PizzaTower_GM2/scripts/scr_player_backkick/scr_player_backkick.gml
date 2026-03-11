@@ -55,18 +55,18 @@ function scr_player_backkick() {
     
     if (!grounded)
     {
-        if (momemtum == 0)
+        if (momemtum == false)
             hsp = move * movespeed;
         else
             hsp = xscale * movespeed;
         
-        if (move != xscale && momemtum == 1 && movespeed != 0)
+        if (move != xscale && momemtum == true && movespeed != 0)
             movespeed -= 0.05;
         
         if (movespeed == 0)
-            momemtum = 0;
+            momemtum = false;
         
-        if ((move == 0 && momemtum == 0) || scr_solid(x + hsp, y))
+        if ((move == 0 && momemtum == false) || scr_solid(x + hsp, y))
         {
             movespeed = 0;
             mach2 = 0;
@@ -92,7 +92,7 @@ function scr_player_backkick() {
         {
             mach2 = 0;
             movespeed = 0;
-            momemtum = 0;
+            momemtum = false;
         }
         
         landAnim = true;
