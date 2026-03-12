@@ -117,7 +117,7 @@ function scr_player_normal() {
     
     if (character == "S")
     {
-        if (machslideAnim == fakse)
+        if (machslideAnim == false)
         {
             if (move == 0)
             {

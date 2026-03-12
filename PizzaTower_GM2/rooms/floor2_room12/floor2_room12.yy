@@ -156,8 +156,8 @@
     {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Backgrounds_1","animationFPS":0.35,"animationSpeedType":1,"colour":4294967295,"depth":500,"effectEnabled":false,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":{"name":"spr_plains1","path":"sprites/spr_plains1/spr_plains1.yy",},"stretch":false,"userdefinedAnimFPS":true,"userdefinedDepth":true,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
   "parent": {
-    "name": "Rooms",
-    "path": "folders/Rooms.yy",
+    "name": "Mansion",
+    "path": "folders/Rooms/Unused/Levels/Mansion.yy",
   },
   "parentRoom": null,
   "physicsSettings": {

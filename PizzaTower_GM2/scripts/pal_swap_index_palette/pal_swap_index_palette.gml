@@ -1,7 +1,6 @@
-function pal_swap_index_palette() {
-    if (!ds_map_exists(global.Pal_Map, argument[0]))
+function pal_swap_index_palette(_spr) {
+    if (!ds_map_exists(global.Pal_Map, _spr))
     {
-        var _spr = argument[0];
         var _colors = sprite_get_height(_spr);
         var _palettes = ds_list_create();
         ds_map_add(global.Pal_Map, _spr, _palettes);

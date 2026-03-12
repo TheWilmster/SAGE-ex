@@ -1,9 +1,4 @@
-function __background_set_internal() {
-    var __prop = argument[0];
-    var __bind = argument[1];
-    var __val = argument[2];
-    var __backinfo = argument[3];
-    
+function __background_set_internal(__prop, __bind, __val, __backinfo) {
     if (__backinfo[0] == -1)
         return -1;
     

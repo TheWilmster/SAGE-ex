@@ -169,8 +169,8 @@
       ],"layers":[],"properties":[],"userdefinedDepth":true,"visible":true,},
   ],
   "parent": {
-    "name": "Rooms",
-    "path": "folders/Rooms.yy",
+    "name": "Refrigerator-Refrigerador-Freezerator",
+    "path": "folders/Rooms/Unused/Levels/Refrigerator-Refrigerador-Freezerator.yy",
   },
   "parentRoom": null,
   "physicsSettings": {

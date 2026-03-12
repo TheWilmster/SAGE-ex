@@ -93,8 +93,8 @@
     {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Compatibility_Background_0_bg_sky2","animationFPS":15.0,"animationSpeedType":0,"colour":4294967295,"depth":2147483500,"effectEnabled":false,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"hspeed":0.0,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":{"name":"bg_sky2","path":"sprites/bg_sky2/bg_sky2.yy",},"stretch":false,"userdefinedAnimFPS":true,"userdefinedDepth":true,"visible":true,"vspeed":0.0,"vtiled":true,"x":0,"y":0,},
   ],
   "parent": {
-    "name": "Rooms",
-    "path": "folders/Rooms.yy",
+    "name": "Hub",
+    "path": "folders/Rooms/Unused/Hub.yy",
   },
   "parentRoom": null,
   "physicsSettings": {

@@ -26,7 +26,7 @@ function scr_collide_destructibles() {
         {
             falling = true;
             
-            if (falling == trie)
+            if (falling == true)
                 image_speed = 0.35;
         }
     }

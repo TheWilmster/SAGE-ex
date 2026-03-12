@@ -1,9 +1,7 @@
-function pal_swap_set() {
+function pal_swap_set(_pal_sprite, _pal_index, _use_surface = false) {
     shader_set(global.Pal_Shader);
-    var _pal_sprite = argument[0];
-    var _pal_index = argument[1];
     
-    if (!argument[2])
+    if (!_use_surface)
     {
         var tex = sprite_get_texture(_pal_sprite, 0);
         var UVs = sprite_get_uvs(_pal_sprite, 0);

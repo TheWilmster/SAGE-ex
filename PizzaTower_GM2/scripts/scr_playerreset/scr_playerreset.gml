@@ -93,7 +93,7 @@ function scr_playerreset() {
         global.keyget = false;
         global.collect = 0;
         global.ammo = 0;
-        global.treasure = trie;
+        global.treasure = true;
         global.combo = 0;
         global.combotime = 0;
         global.pizzacoin = 0;

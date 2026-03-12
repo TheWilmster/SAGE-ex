@@ -1181,8 +1181,8 @@
       ],"layers":[],"properties":[],"userdefinedDepth":true,"visible":true,},
   ],
   "parent": {
-    "name": "Rooms",
-    "path": "folders/Rooms.yy",
+    "name": "Peppibot Factory",
+    "path": "folders/Rooms/Unused/Levels/Peppibot Factory.yy",
   },
   "parentRoom": null,
   "physicsSettings": {
