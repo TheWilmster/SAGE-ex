@@ -1,4 +1,4 @@
-function tile_layer_hide__depth {
+function tile_layer_hide(__depth) {
     var __layers = layer_get_all();
     var __numlayers = array_length_1d(__layers);
     
