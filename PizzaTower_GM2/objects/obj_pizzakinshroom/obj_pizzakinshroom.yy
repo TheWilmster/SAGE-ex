@@ -12,8 +12,8 @@
   "managed": false,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Toppins",
+    "path": "folders/Objects/Collectables/Toppins.yy",
   },
   "parentObjectId": null,
   "persistent": false,
