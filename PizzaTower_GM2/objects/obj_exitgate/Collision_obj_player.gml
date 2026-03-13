@@ -30,19 +30,19 @@ with (obj_player)
         }
         
         if (global.rank == "s")
-            scr_soundeffect(sfx_collecttoppin6);
+            scr_soundeffect(mu_ranks);
         
         if (global.rank == "a")
-            scr_soundeffect(sfx_collecttoppin7);
+            scr_soundeffect(mu_ranka);
         
         if (global.rank == "b")
-            scr_soundeffect(sfx_collecttoppin9);
+            scr_soundeffect(mu_rankb);
         
         if (global.rank == "c")
-            scr_soundeffect(sfx_collecttoppin9);
+            scr_soundeffect(mu_rankc);
         
         if (global.rank == "d")
-            scr_soundeffect(sfx_enemyprojectile0);
+            scr_soundeffect(mu_rankd);
         
         audio_stop_sound(mu_pizzatime);
         audio_stop_sound(mu_snickchallenge);
