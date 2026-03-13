@@ -11,8 +11,8 @@
   "managed": false,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Enemies",
+    "path": "folders/Objects/Level & Hub Strcuture/Enemies.yy",
   },
   "parentObjectId": {
     "name": "obj_baddie",

@@ -6,8 +6,8 @@
   "managed": false,
   "overriddenProperties": [],
   "parent": {
-    "name": "Effects",
-    "path": "folders/Objects/Effects.yy",
+    "name": "Debris",
+    "path": "folders/Objects/Effects/Debris.yy",
   },
   "parentObjectId": null,
   "persistent": false,

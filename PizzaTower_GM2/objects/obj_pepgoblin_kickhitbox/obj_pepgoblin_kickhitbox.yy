@@ -11,8 +11,8 @@
   "managed": false,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Hitboxes",
+    "path": "folders/Objects/Level & Hub Strcuture/Enemies/Hitboxes.yy",
   },
   "parentObjectId": null,
   "persistent": false,

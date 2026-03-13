@@ -10,8 +10,8 @@
   "managed": false,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Hitboxes",
+    "path": "folders/Objects/Unused/Player/Hitboxes.yy",
   },
   "parentObjectId": null,
   "persistent": false,

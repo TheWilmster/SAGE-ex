@@ -10,8 +10,8 @@
   "managed": false,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Clouds, Smoke, & Impacts",
+    "path": "folders/Objects/Effects/Clouds, Smoke, & Impacts.yy",
   },
   "parentObjectId": null,
   "persistent": false,

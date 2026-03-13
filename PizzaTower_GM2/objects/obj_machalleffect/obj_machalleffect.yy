@@ -9,8 +9,8 @@
   "managed": false,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Mach",
+    "path": "folders/Objects/Effects/Mach.yy",
   },
   "parentObjectId": null,
   "persistent": false,

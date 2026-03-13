@@ -11,8 +11,8 @@
   "managed": false,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Warps",
+    "path": "folders/Objects/Unused/Level & Hub Structure/Warps.yy",
   },
   "parentObjectId": null,
   "persistent": true,

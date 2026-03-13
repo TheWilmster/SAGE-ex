@@ -9,8 +9,8 @@
   "managed": false,
   "overriddenProperties": [],
   "parent": {
-    "name": "Effects",
-    "path": "folders/Objects/Unused/Effects.yy",
+    "name": "Debris",
+    "path": "folders/Objects/Unused/Effects/Debris.yy",
   },
   "parentObjectId": {
     "name": "obj_parentparticle",
