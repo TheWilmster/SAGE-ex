@@ -12,8 +12,8 @@
   "managed": false,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Destroyables",
+    "path": "folders/Objects/Unused/Level & Hub Structure/Destroyables.yy",
   },
   "parentObjectId": {
     "name": "obj_destructibles",

@@ -1,3 +1,8 @@
+if (room != hub_room1)
+    fadeoff = audio_sound_get_track_position(global.music);
+else
+    fadeoff = 0;
+
 if (!audio_is_playing(mu_pizzatime) && global.panic == true && obj_pause.pause == false && obj_camera.ded == false)
 {
     audio_stop_all();
@@ -17,8 +22,3 @@ else if (!audio_is_playing(mu_snickchallengeend) && global.snickchallenge == tru
     scr_sound(mu_snickchallengeend);
     pausedmusic = mu_snickchallenge;
 }
-
-if (room != hub_room1)
-    fadeoff = clamp(audio_sound_get_track_position(global.music), 0, audio_sound_get_loop_end(global.music));
-else
-    fadeoff = 0;
