@@ -143,7 +143,7 @@ function scr_player_grab() {
     if (key_jump)
         input_buffer_jump = false;
     
-    if ((grounded && input_buffer_jump < false && !key_down && !key_attack && vsp > 0) && sprite_index != spr_player_swingding)
+    if ((grounded && input_buffer_jump < 8 && !key_down && !key_attack && vsp > 0) && sprite_index != spr_player_swingding)
     {
         scr_soundeffect(sfx_jump);
         sprite_index = spr_player_haulingjump;

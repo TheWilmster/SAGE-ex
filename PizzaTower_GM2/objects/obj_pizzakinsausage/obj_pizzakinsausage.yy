@@ -13,7 +13,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Toppins",
-    "path": "folders/Objects/Collectables/Toppins.yy",
+    "path": "folders/Objects/Level & Hub Strcuture/Collectables/Toppins.yy",
   },
   "parentObjectId": null,
   "persistent": false,

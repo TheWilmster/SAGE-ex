@@ -12,7 +12,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Collectables",
-    "path": "folders/Objects/Collectables.yy",
+    "path": "folders/Objects/Level & Hub Strcuture/Collectables.yy",
   },
   "parentObjectId": null,
   "persistent": false,

@@ -12,7 +12,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Enemies",
-    "path": "folders/Objects/Unused/Enemies.yy",
+    "path": "folders/Objects/Unused/Level & Hub Structure/Enemies.yy",
   },
   "parentObjectId": {
     "name": "obj_baddie",

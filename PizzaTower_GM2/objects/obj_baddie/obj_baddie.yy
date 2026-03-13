@@ -18,7 +18,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Parents",
-    "path": "folders/Objects/Enemies/Parents.yy",
+    "path": "folders/Objects/Level & Hub Strcuture/Enemies/Parents.yy",
   },
   "parentObjectId": null,
   "persistent": false,
