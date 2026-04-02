@@ -1,1 +1,0 @@
-fadealpha = 1;

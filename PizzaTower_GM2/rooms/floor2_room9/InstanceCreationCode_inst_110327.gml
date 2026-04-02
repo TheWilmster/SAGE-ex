@@ -1,1 +1,0 @@
-global.minutes = 10;
