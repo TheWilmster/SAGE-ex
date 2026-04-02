@@ -48,7 +48,7 @@ if (global.panic == false && global.snickchallenge == false)
                 {
                     audio_stop_all();
                     scr_sound(mu_dungeon);
-                    audio_sound_set_track_position(global.music, fadeoff);
+                    audio_sound_set_track_position(global.music, wrap(fadeoff, 0, audio_sound_length(global.music)));
                     pausedmusic = mu_dungeon;
                 }
             }
@@ -58,7 +58,7 @@ if (global.panic == false && global.snickchallenge == false)
                 {
                     audio_stop_all();
                     scr_sound(mu_dungeondepth);
-                    audio_sound_set_track_position(global.music, fadeoff);
+                    audio_sound_set_track_position(global.music, wrap(fadeoff, 0, audio_sound_length(global.music)));
                     pausedmusic = mu_dungeondepth;
                 }
             }
@@ -75,7 +75,7 @@ if (global.panic == false && global.snickchallenge == false)
                 {
                     audio_stop_all();
                     scr_sound(mu_medievalentrance);
-                    audio_sound_set_track_position(global.music, fadeoff);
+                    audio_sound_set_track_position(global.music, wrap(fadeoff, 0, audio_sound_length(global.music)));
                     pausedmusic = mu_medievalentrance;
                 }
             }
@@ -85,7 +85,7 @@ if (global.panic == false && global.snickchallenge == false)
                 {
                     audio_stop_all();
                     scr_sound(mu_medievalremix);
-                    audio_sound_set_track_position(global.music, fadeoff);
+                    audio_sound_set_track_position(global.music, wrap(fadeoff, 0, audio_sound_length(global.music)));
                     pausedmusic = mu_medievalremix;
                 }
             }
@@ -95,7 +95,7 @@ if (global.panic == false && global.snickchallenge == false)
                 {
                     audio_stop_all();
                     scr_sound(mu_medieval);
-                    audio_sound_set_track_position(global.music, fadeoff);
+                    audio_sound_set_track_position(global.music, wrap(fadeoff, 0, audio_sound_length(global.music)));
                     pausedmusic = mu_medieval;
                 }
             }
@@ -112,7 +112,7 @@ if (global.panic == false && global.snickchallenge == false)
                 {
                     audio_stop_all();
                     scr_sound(mu_ruin);
-                    audio_sound_set_track_position(global.music, fadeoff);
+                    audio_sound_set_track_position(global.music, wrap(fadeoff, 0, audio_sound_length(global.music)));
                     pausedmusic = mu_ruin;
                 }
             }
@@ -122,7 +122,7 @@ if (global.panic == false && global.snickchallenge == false)
                 {
                     audio_stop_all();
                     scr_sound(mu_ruinremix);
-                    audio_sound_set_track_position(global.music, fadeoff);
+                    audio_sound_set_track_position(global.music, wrap(fadeoff, 0, audio_sound_length(global.music)));
                     pausedmusic = mu_ruinremix;
                 }
             }
@@ -135,7 +135,7 @@ if (global.panic == false && global.snickchallenge == false)
         {
             audio_stop_all();
             scr_sound(mu_secret);
-            audio_sound_set_track_position(global.music, fadeoff);
+            audio_sound_set_track_position(global.music, wrap(fadeoff, 0, audio_sound_length(global.music)));
             pausedmusic = mu_secret;
         }
     }

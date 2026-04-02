@@ -1,5 +1,5 @@
 if (room != hub_room1)
-    fadeoff = wrap(audio_sound_get_track_position(global.music), 0, audio_sound_length(global.music));
+    fadeoff = audio_sound_get_track_position(global.music);;
 else
     fadeoff = 0;
 
